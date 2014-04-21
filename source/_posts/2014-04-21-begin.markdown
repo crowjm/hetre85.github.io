@@ -6,6 +6,6 @@ comments: true
 categories: 
 ---
 
-This is incredible first post. Right now I am working on some Rails projects that I am really excited about getting deployed. The main reason I wanted to start this Octopress blog was to reflect on what I have learned in the last year that I have been learning Ruby/Rails/etc.
+This is an incredible first post. Right now I am working on some Rails projects that I am really excited about getting deployed. The main reason I wanted to start this Octopress blog was to reflect on what I have learned in the last year that I have been learning Ruby/Rails/etc.
 
 I'll be trying to do rather granular blog posts that outline one or two things I learn each day.
