@@ -9,9 +9,9 @@ categories: Boole
 ## Think about the Moon
 #  Denken Sie über die Liebe
 
-Every time I do something in programming that has to do with a boolean, certainly I tune all my thoughts for a brief second to that man, that lunar crater, that effervescent logician George Boole. We all know that in the brevity of one second we can imagine and live in whole worlds of thought. In my second of thought towards Boole, I wonder if he realized what the magnitude of wonder, magic, and cat-memeness he would gift to the world.
+Every time I do something in programming that has to do with a boolean, certainly I tune all my thoughts for a brief second to that man, that lunar crater, that effervescent logician George Boole. We all know that in the brevity of one second we can imagine and live in whole worlds of thought. In my second of thought towards Boole, I wonder if he realized what magnitude of wonder, magic, and cat-memeness he would gift to the world.
 
-![Boolean Doodle](https://twitter.com/hetre85/status/489580349949616128/photo/1)
+![Boolean Doodle](https://pbs.twimg.com/media/BstWu6QCQAAb66k.jpg:large)
 
 
 As developers, most of us are just shovels caught in a mental traffic jam and leaned against a desk compared to the cerebral tempest of the likes of Boole.
