@@ -1,0 +1,28 @@
+---
+layout: post
+title: "Erlang"
+date: 2014-07-07 14:09:59 -0500
+comments: true
+categories: erlang
+---
+### Learning is good
+
+So, I have been working primarily in Ruby for over a year and have absolutely loved it.
+I have super enjoyed the time I have spent in JavaScript as well.
+There's something magical about JavaScript that I can't quite put my finger on.
+
+I wanted to pick up a new language; something fun and different.
+
+Something that the mustache twirling, penny-farthing riding hipsters of devland wouldn't look at and flick the ashes of their cigarettes on.
+
+![a penny farthing is pictured here](http://upload.wikimedia.org/wikipedia/commons/a/a7/Ordinary_bicycle01.jpg)
+
+I decided to learn Erlang. And it is **so much fun**.
+
+I will of course post more about this in the future.
+
+[Here's where you can learn](http://learnyousomeerlang.com/)
+
+Cheers,
+
+Hunter
