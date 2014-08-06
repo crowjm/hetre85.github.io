@@ -15,7 +15,6 @@ I wanted to pick up a new language; something fun and different.
 
 Something that the mustache twirling, penny-farthing riding hipsters of devland wouldn't look at and flick the ashes of their cigarettes on.
 
-![a penny farthing is pictured here](http://upload.wikimedia.org/wikipedia/commons/a/a7/Ordinary_bicycle01.jpg)
 
 I decided to learn Erlang. And it is **so much fun**.
 

@@ -18,9 +18,5 @@ As developers, most of us are just shovels caught in a mental traffic jam and le
 
 But yet, I feel proud to know that Boole was a Philosopher and Math dude.
 
-When I think about the Philosophers who have inspired me, Most of the time I'm just all:
-
-![adventure time jake waving arms](http://media.tumblr.com/tumblr_m8g2eeBxw81rsmvlw.gif)
-
 
 things_left_to_say.empty?
