@@ -1,0 +1,12 @@
+# Site settings
+title: hetre85
+email: hetre85 [at] gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Cool website for hetre.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://hetre85.github.io" # the base hostname & protocol for your site
+twitter_username: hetre85
+github_username:  hetre85
+
+# Build settings
+markdown: kramdown
