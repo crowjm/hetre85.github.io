@@ -4,8 +4,6 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+hetre85 is programmer liviing in Austin, TX which is home to the world's most magical tacos. You can find him writing Ruby code by a river or stream, engineering a Rails app under a Town Lake sunrise, or playing guitar on the pedestrian bridge.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+hetre85 is an independant contractor who is currently booked up, but is happy to hear about what you are working on as long as you are not a recruiter :\)
