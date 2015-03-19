@@ -6,15 +6,23 @@
 </description>
     <link>http://hetre85.github.io/</link>
     <atom:link href="http://hetre85.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 19 Mar 2015 17:22:45 -0500</pubDate>
-    <lastBuildDate>Thu, 19 Mar 2015 17:22:45 -0500</lastBuildDate>
+    <pubDate>Thu, 19 Mar 2015 17:24:52 -0500</pubDate>
+    <lastBuildDate>Thu, 19 Mar 2015 17:24:52 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>Tips For Remote Work</title>
-        <description>
+        <title>Tips for Remote Work</title>
+        <description>&lt;h3 id=&quot;who-is-this-guy-trying-to-be-the-hint-master&quot;&gt;Who is this guy trying to be the hint master?&lt;/h3&gt;
+&lt;p&gt;I never thought I’d be &lt;em&gt;remotely&lt;/em&gt; qualified to give any advice on remote work. And, hey, don’t get me wrong - I’m not some sort of remote work genius that you can schedule an appointment with to solve all of your issues. That said, I do have 6+ months experience of working full time as a remote developer. In this time, I have learned a little bit about remote work, and a lot about myself. So, here it is, a short blog post about some pitfalls that I had to discover on my own that might help you out if you are new to remote work.&lt;/p&gt;
+
+&lt;h5 id=&quot;get-everything-in-writing&quot;&gt;1.Get Everything in Writing&lt;/h5&gt;
+&lt;p&gt;Whether you answer to a marketing manager, project manager, or the ceo of your company, whenever you get an assignment please get it in writing. There is nothing more frustrating for you and your employer than you spending a whole day working on the wrong thing because there was a verbal miscommunication. I learned this the hard way finding out that even if I took really great notes during conversations that something, literally, always gets missed. The absolute best way to avoid this is to have some system like Github (create an issue, you get assigned to it) or Trello where everyone knows what everyone is working on and all the requirements are in writing. If you have an employer or project manager who isn’t technical help them set up an account and show them how to add issues and just the very basics so that you have a streamlined, central source of communication around your project.&lt;/p&gt;
+
+&lt;h5 id=&quot;overcommunicate&quot;&gt;2. Overcommunicate&lt;/h5&gt;
+&lt;p&gt;If you jump on a quick phone or video call with a colleague or your project manager and they ask you to get something done, no matter how simple it is I say something like this: “Before we get off this call I want to make sure that I understand you correctly. You want me to set variable x equal to false?” Then ask them to create an item in whatever project managemnt system you use. In a professional setting you should not get pushback for asking for requirement changes to a project to be supplied, ultimately, in writing.
+- hetre85&lt;/p&gt;
 </description>
-        <pubDate>Thu, 19 Mar 2015 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 19 Mar 2015 12:00:00 -0500</pubDate>
         <link>http://hetre85.github.io/2015/03/19/tips-for-remote-work.html</link>
         <guid isPermaLink="true">http://hetre85.github.io/2015/03/19/tips-for-remote-work.html</guid>
         
