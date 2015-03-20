@@ -15,7 +15,7 @@ I learned this the hard way finding out that even if I took really great notes d
 
 
 #### 2. Overcommunicate
-If you jump on a quick phone or video call with a colleague or your project manager and they ask you to get something done, no matter how simple it is I say something like this: "Before we get off this call I want to make sure that I understand you correctly. You want me to set variable x equal to false?" Then ask them to create an item in whatever project managemnt system you use. Good policy to have: if it warrants a call, it should probably be written down.
+If you jump on a quick phone or video call with a colleague or your project manager and they ask you to get something done, no matter how simple it is I say something like this: "Before we get off this call I want to make sure that I understand you correctly. You want me to set variable x equal to false?" Then ask them to create an item in whatever project management system you use. Good policy to have: if it warrants a call, it should probably be written down.
 
 #### 3. Breaks
 If you've ever worked in an office you know that it's basically the hit factory of people taking breaks. I think that one of the hardest parts of being remote is that because you don't have any "I'm in the office" visibility, it's really easy to try to overcompensate by not taking any breaks. I used to really worry about taking a lunch break. I remember thinking, "someone's gonna email me and I won't be there to respond and then the server will blow up and then a ultra negative doom spiral will flush the earth down the cosmic toilet."
