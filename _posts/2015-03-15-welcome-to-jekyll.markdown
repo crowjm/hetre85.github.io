@@ -2,6 +2,7 @@
 layout: post
 title:  "Init Post"
 date:   2015-03-15 16:32:13
+excerpt: I was using Octopress to blog...
 ---
 
 ###Changing the framework and layout
