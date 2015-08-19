@@ -1,0 +1,8 @@
+$col: 6.725%;
+$gut: 1.754%;
+
+@mixin grid($cnum) {
+  width: ($col * $cnum)+($gut*(($cnum)-1));
+  margin-right: $gut;
+  display: inline-block;
+}
