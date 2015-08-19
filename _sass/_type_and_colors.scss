@@ -1,6 +1,11 @@
 $font-family: 'neuzeit-grotesk', sans-serif;
+$h1: #ed1a24;
+$a: #ed1a24;
+$sub-head: #164d7e;
+$p: #000;
+$bg: #fdf53c;
 
-p, a, span, li, .page-number, q {
+p, a, span, li, q {
   line-height: 1.8;
 }
 
@@ -12,22 +17,37 @@ p, q, li {
   font-family: $font-family;
   font-weight: 400;
   font-size: 1.5rem;
+  color: $p;
 }
 
 a {
   font-family: $font-family;
   font-weight: 700;
   font-size: 1.5rem;
+  color: $a;
 }
 
 h1 {
   font-family: $font-family;
   font-weight: 900;
   font-size: 3.5rem;
+  color: $h1;
 }
 
 h2 {
   font-family: $font-family;
   font-weight: 900;
   font-size: 2.25rem;
+  color: $sub-head;
 }
+
+body {
+  background-color: $bg;
+}
+
+
+
+
+
+
+

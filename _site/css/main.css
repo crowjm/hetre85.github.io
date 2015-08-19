@@ -45,7 +45,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-p, a, span, li, .page-number, q {
+p, a, span, li, q {
   line-height: 1.8; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -54,19 +54,26 @@ h1, h2, h3, h4, h5, h6 {
 p, q, li {
   font-family: "neuzeit-grotesk", sans-serif;
   font-weight: 400;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  color: black; }
 
 a {
   font-family: "neuzeit-grotesk", sans-serif;
   font-weight: 700;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  color: #ed1a24; }
 
 h1 {
   font-family: "neuzeit-grotesk", sans-serif;
   font-weight: 900;
-  font-size: 3.5rem; }
+  font-size: 3.5rem;
+  color: #ed1a24; }
 
 h2 {
   font-family: "neuzeit-grotesk", sans-serif;
   font-weight: 900;
-  font-size: 2.25rem; }
+  font-size: 2.25rem;
+  color: #164d7e; }
+
+body {
+  background-color: #fdf53c; }
