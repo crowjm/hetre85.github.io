@@ -6,11 +6,17 @@
   width: 100%;
   display: block;
   list-style: none;
+  text-align: right;
+  overflow: hidden;
 }
 
 .nav-collapse li {
   width: 100%;
   display: block;
+}
+
+.nav-collapse li:last-child {
+  margin-bottom: 1rem;
 }
 
 .nav-collapse a {
@@ -24,10 +30,14 @@
   display: block;
   overflow: hidden;
   zoom: 1;
+  float: right;
+  clear: both;
+  width: 60%;
 }
 
 .nav-collapse.opened {
-  max-height: 9999px;
+  max-height: 500px;
+  position: relative;
 }
 
 .nav-toggle {
@@ -41,6 +51,8 @@
   text-decoration: none;
   float: right;
   font-size: 3.5rem;
+  margin-top: 21px;
+  display: block;
 }
 
 @media screen and (min-width: 40em) {

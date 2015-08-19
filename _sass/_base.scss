@@ -4,3 +4,15 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+
+//========= HEADER ==========//
+
+header {
+  overflow: hidden;
+  padding-top: 1rem;
+  border-bottom: 8px solid $border;
+  .header-components {
+    padding-bottom: 1rem;
+  }
+}
