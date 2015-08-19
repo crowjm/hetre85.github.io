@@ -4,4 +4,5 @@
 @charset "utf-8";
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import
+// Always make reset the first @import
+@import 'reset';
