@@ -78,6 +78,9 @@ h2, .post-link {
 body {
   background-color: #fdf5ec; }
 
+.post-meta {
+  color: #184d7f; }
+
 /*! responsive-nav.js 1.0.39 by @viljamis */
 .nav-collapse ul {
   margin: 0;
@@ -141,6 +144,11 @@ body {
   margin-right: auto;
   margin-left: auto; }
 
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.5rem; }
+
 header {
   overflow: hidden;
   padding-top: 1rem;
@@ -160,11 +168,33 @@ header {
   .icons img {
     width: 70px; }
 
-h1 {
-  text-transform: uppercase;
-  text-align: center; }
+.blog {
+  border-bottom: 8px solid #164d73; }
 
 .post-link {
   text-decoration: none;
   text-transform: uppercase;
-  text-align: left; }
+  text-align: center;
+  width: 75%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1.2; }
+
+.post-meta {
+  text-align: center; }
+
+.post-float {
+  margin-bottom: 2rem; }
+
+.post-float:last-of-type {
+  margin-bottom: 4rem; }
+
+.blogindexfooter {
+  background-image: url(/images/zigzagpattern.jpg);
+  background-position: cover;
+  background-repeat: no-repeat;
+  padding-top: 4rem;
+  padding-bottom: 4rem; }
+  .blogindexfooter p {
+    text-align: center; }

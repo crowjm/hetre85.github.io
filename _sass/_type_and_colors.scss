@@ -5,6 +5,7 @@ $sub-head: #164d7e;
 $p: #000;
 $bg: #fdf5ec;
 $border: #164d73;
+$post-meta: #184d7f;
 
 p, a, span, li, q {
   line-height: 1.8;
@@ -44,6 +45,10 @@ h2, .post-link {
 
 body {
   background-color: $bg;
+}
+
+.post-meta {
+  color: $post-meta;
 }
 
 
