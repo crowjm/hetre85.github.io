@@ -55,14 +55,22 @@
   display: block;
 }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 680px) {
   .js .nav-collapse {
     position: relative;
+    width: 100%;
+  }
+  .nav-collapse {
+    margin-top: -42px;
   }
   .js .nav-collapse.closed {
     max-height: none;
   }
   .nav-toggle {
     display: none;
+  }
+  .nav-collapse li {
+    width: 100px;
+    float: right;
   }
 }

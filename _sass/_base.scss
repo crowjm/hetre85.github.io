@@ -50,7 +50,6 @@ header {
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  width: 75%;
   display: block;
   margin-right: auto;
   margin-left: auto;
@@ -62,21 +61,28 @@ header {
 }
 
 .post-float {
-  margin-bottom: 2rem;
+  width: 100%;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .post-float:last-of-type {
   margin-bottom: 4rem;
 }
 
+.post-excerpt {
+  line-height: 1.5;
+}
+
 
 
 //========= FOOTER =========//
-
 .blogindexfooter {
   background-image: url(/images/zigzagpattern.jpg);
-  background-position: cover;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
   padding-top: 4rem;
   padding-bottom: 4rem;
   p {

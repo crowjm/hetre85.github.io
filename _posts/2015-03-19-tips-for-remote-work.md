@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "7 Tips for Remote Work"
+title:  "Tips for Remote Work"
 date:   2015-03-19 17:00:00
 excerpt: Well, so much for this being short.
 ---

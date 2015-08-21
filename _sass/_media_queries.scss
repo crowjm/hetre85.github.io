@@ -1,0 +1,26 @@
+
+
+
+@media screen and (min-width: 680px) {
+//============= BLOG ===============//
+
+
+  .post-list {
+    max-width: 1180px;
+    overflow: hidden;
+  }
+  .post-float {
+    @include grid(6);
+  }
+
+
+  // .post-float {
+  //   width: 48%;
+  //   display: inline-block;
+  // }
+
+  // .post-float:nth-of-type(even) {
+  //   margin-left: 4%;
+  // }
+
+}
