@@ -8,7 +8,7 @@ excerpt: It looked pretty gnarly, like a 90's website had a dream about the futu
 ###Sometimes you need a UI designer.
 Hi. Chances are you have never been to this blog, but not long ago, it was a plain, out of the box, jekyll blog. It looked pretty gnarly, like a 90's website had a dream about the future. Like a geocity rising from the ashes of an angelfire.
 
-When all seemed lost, yea, when even the sun itself began to set on the hope of this blog along came Jesse. She is a recent graduate of the Iron Yard's UI Design program, as well as javascripter. You can read more about her process and her really cool project, "100 Days of Making" over at <a href= "http://www.jessecrow.com">jessecrow.com</a>. 
+When all seemed lost, yea, when even the sun itself began to set on the hope of this blog along came Jesse. She is a recent graduate of the Iron Yard's UI Design program, as well as javascripter. You can read more about her process and her really cool project, "100 Days Project" over at <a href= "http://www.jessecrow.com">jessecrow.com</a>. 
 
 After she iterated over some concepts and style tiles we actually coded it up together. She did most of the driving as she is a jekyll/sass master. The big take away from our pair programming session for me was that while sass is not difficult, it takes skill and experience to organize your assets and stylesheets in a way that is extensible now and easy to change in the future.
 

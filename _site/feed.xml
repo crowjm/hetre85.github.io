@@ -6,8 +6,8 @@
 </description>
     <link>http://hetre85.github.io/</link>
     <atom:link href="http://hetre85.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 26 Aug 2015 06:13:55 -0500</pubDate>
-    <lastBuildDate>Wed, 26 Aug 2015 06:13:55 -0500</lastBuildDate>
+    <pubDate>Wed, 26 Aug 2015 06:15:04 -0500</pubDate>
+    <lastBuildDate>Wed, 26 Aug 2015 06:15:04 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -15,7 +15,7 @@
         <description>&lt;h3 id=&quot;sometimes-you-need-a-ui-designer&quot;&gt;Sometimes you need a UI designer.&lt;/h3&gt;
 &lt;p&gt;Hi. Chances are you have never been to this blog, but not long ago, it was a plain, out of the box, jekyll blog. It looked pretty gnarly, like a 90’s website had a dream about the future. Like a geocity rising from the ashes of an angelfire.&lt;/p&gt;
 
-&lt;p&gt;When all seemed lost, yea, when even the sun itself began to set on the hope of this blog along came Jesse. She is a recent graduate of the Iron Yard’s UI Design program, as well as javascripter. You can read more about her process and her really cool project, “100 Days of Making” over at &lt;a href=&quot;http://www.jessecrow.com&quot;&gt;jessecrow.com&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;When all seemed lost, yea, when even the sun itself began to set on the hope of this blog along came Jesse. She is a recent graduate of the Iron Yard’s UI Design program, as well as javascripter. You can read more about her process and her really cool project, “100 Days Project” over at &lt;a href=&quot;http://www.jessecrow.com&quot;&gt;jessecrow.com&lt;/a&gt;. &lt;/p&gt;
 
 &lt;p&gt;After she iterated over some concepts and style tiles we actually coded it up together. She did most of the driving as she is a jekyll/sass master. The big take away from our pair programming session for me was that while sass is not difficult, it takes skill and experience to organize your assets and stylesheets in a way that is extensible now and easy to change in the future.&lt;/p&gt;
 
