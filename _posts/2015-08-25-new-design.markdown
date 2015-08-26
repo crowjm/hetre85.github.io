@@ -2,7 +2,7 @@
 layout: post
 title:  "New Design"
 date:   2015-08-25 20:32:13
-excerpt: Like a geocity rising from the ashes of an angelfire.
+excerpt: It looked pretty gnarly, like a 90's website had a dream about the future.
 ---
 
 ###Sometimes you need a UI designer.
