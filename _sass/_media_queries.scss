@@ -37,6 +37,25 @@
     margin-left: 5%;
   }
 
+  //============= ABOUT ===============//
+  .about-text, .about-photo {
+    float: left;
+  }
+
+  .about {
+  .about-text {
+    width: 65%;
+    margin-right: 5%;
+  }
+  .about-photo {
+    width: 30%;
+    img {
+      float: right;
+    }
+  }
+}
+  
+
 }
 
 

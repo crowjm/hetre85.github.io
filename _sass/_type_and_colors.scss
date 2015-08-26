@@ -1,4 +1,4 @@
-$font-family: 'neuzeit-grotesk', sans-serif;
+$font-family: "neuzeit-grotesk", sans-serif;
 $h1: #ed1a24;
 $a: #ed1a24;
 $sub-head: #164d7e;
@@ -40,6 +40,20 @@ h2, .post-link {
   font-family: $font-family;
   font-weight: 900;
   font-size: 2.25rem;
+  color: $sub-head;
+}
+
+h3 {
+  font-family: $font-family;
+  font-weight: 900;
+  font-size: 2rem;
+  color: $sub-head;
+}
+
+h4 {
+  font-family: $font-family;
+  font-weight: 900;
+  font-size: 1.75rem;
   color: $sub-head;
 }
 

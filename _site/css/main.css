@@ -75,6 +75,18 @@ h2, .post-link {
   font-size: 2.25rem;
   color: #164d7e; }
 
+h3 {
+  font-family: "neuzeit-grotesk", sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  color: #164d7e; }
+
+h4 {
+  font-family: "neuzeit-grotesk", sans-serif;
+  font-weight: 900;
+  font-size: 1.75rem;
+  color: #164d7e; }
+
 body {
   background-color: #fdf5ec; }
 
@@ -155,13 +167,13 @@ body {
 h1 {
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1rem; }
 
-header {
+.site-header {
   overflow: hidden;
   padding-top: 1rem;
   border-bottom: 8px solid #164d73; }
-  header .header-components {
+  .site-header .header-components {
     padding-bottom: 1rem; }
 
 .hetre img {
@@ -176,9 +188,6 @@ header {
   .icons img {
     width: 70px; }
 
-.blog {
-  border-bottom: 8px solid #164d73; }
-
 .post-link {
   text-decoration: none;
   text-transform: uppercase;
@@ -189,7 +198,9 @@ header {
   line-height: 1.2; }
 
 .post-meta {
-  text-align: center; }
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold; }
 
 .post-float {
   width: 350px;
@@ -203,14 +214,47 @@ header {
 .post-excerpt {
   line-height: 1.5; }
 
-.blogindexfooter {
+.post-header .post-meta {
+  margin-bottom: 2rem; }
+
+.post-content {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto; }
+  .post-content p {
+    margin-bottom: 2rem; }
+
+.about-content {
+  max-width: 1180px;
+  margin-right: auto;
+  margin-left: auto; }
+
+.about {
+  margin-bottom: 4rem;
+  overflow: hidden; }
+  .about .about-text {
+    max-width: 700px;
+    margin-right: auto;
+    margin-left: auto; }
+    .about .about-text p {
+      margin-bottom: 2rem; }
+  .about .about-photo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+
+.footerwrapper {
+  border-top: 8px solid #164d73;
   background-image: url(/images/zigzagpattern.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   padding-top: 4rem;
   padding-bottom: 4rem; }
-  .blogindexfooter p {
+  .footerwrapper p {
+    max-width: 650px;
+    margin-right: auto;
+    margin-left: auto;
     text-align: center; }
 
 @media screen and (min-width: 680px) {
@@ -235,4 +279,15 @@ header {
 
   .post-float:nth-of-type(3n+2) {
     margin-right: 5%;
-    margin-left: 5%; } }
+    margin-left: 5%; }
+
+  .about-text, .about-photo {
+    float: left; }
+
+  .about .about-text {
+    width: 65%;
+    margin-right: 5%; }
+  .about .about-photo {
+    width: 30%; }
+    .about .about-photo img {
+      float: right; } }
