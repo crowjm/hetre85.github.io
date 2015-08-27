@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Elixir</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?">
+  <meta name="description" content="Cool website for hetre.
+">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/responsive-nav.js"></script>
+  <script src="//use.typekit.net/avc0ajs.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <link rel="canonical" href="http://www.hetre85.com/2015/08/26/elixir.html">
+  <link rel="alternate" type="application/rss+xml" title="hetre85" href="http://www.hetre85.com/feed.xml" />
+</head>
+
+
+  <body>
+
+    <div class="wrapper">
+  <header class="site-header">
+    <div class="header-components">
+      <img src="/images/logo.png">
+      <nav class="nav-collapse">
+        <ul>
+          <li>
+            <a href="/index.html">BLOG</a>
+          </li>
+          <li>
+            <a href="/about/">ABOUT</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="hetre">
+          <img src="/images/hetre.png">
+        </div>
+        <div class="icons">
+          <img src="/images/ruby-icon.png">
+          <img src="/images/beer-icon.png">
+          <img src="/images/texas-icon.png">
+        </div>
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Elixir</h1>
+    <h3 class="post-meta">Aug 26, 2015</h3>
+  </header>
+
+  <article class="post-content">
+    <p>Being a programmer is fun, especially when you get to work in a language like Ruby all day. For the last year I have been working in Rails full time and I have come a long way since I started teaching myself Ruby back in 2013. I’m still really excited to work in Ruby/Rails each day but recently something has caught my attention and I have been spending my time outside of work digging into it: Elixir.</p>
+
+<p>Elixir is functional language that has given me the same feeling of wonder that I had when I first started learning Ruby. It invites you to build fault-tolerant, distrubuted programs that rely on concurrency. It makes you rethink the basics of what you know about programming. It’s syntax seems much more familiar to Rubyist than other functional languages I’ve looked into. If you’ve been wanting to check out Elixir, head over to  <a href="http://elixir-lang.org">elixir-lang.org</a> for install instructions and a really great getting-started section. You can always read the rest of this post later.</p>
+
+<p>My goal going forward is to write about what I am learning in Elixir each day. I want to keep posts short and about something interesting I learned. For example, today I learned that Elixir uses <code>=</code> for <em>pattern matching</em> rather than assignment.</p>
+
+<pre><code>iex&gt; number = 42
+42
+iex&gt; 42 = number 
+42
+iex&gt; 1 = number                
+** (MatchError) no match of right hand side value: 42
+</code></pre>
+
+<p><br />
+So, Elixir is basically just trying to match both sides of the match operator. Variables can only be set when they are on the left side of the <em>match operator</em>, so <code>42 = number</code> is just making the assertion and it is passing; it’s not resetting the value of <code>number</code>. This is why the last line of input fails: it simply trying to pattern match 1 and number (which at this point is 42). The pattern matching fails with a MatchError.</p>
+
+<p>For a really thorough explanation of this and much more, see the <a href="http://elixir-lang.org/getting-started/pattern-matching.html">getting started guide</a> or pick up Dave Thomas’ book, <a href="https://pragprog.com/book/elixir/programming-elixir">Programming Elixir</a>.</p>
+
+<p>Aside from being really cool, the aspect of this that strikes me is this: it kind of changes the way you think about programming. In Ruby we assign stuff all day and it is such an integral part of every solution that looking at code this way actually shifts <em>the way</em> I’m thinking.</p>
+
+<p>Anyway, much more to come soon. Sorry if this post feels a little rushed, but I was eager to get started on blogging about Elixir! Yay!</p>
+
+<p>Cheers</p>
+
+<p>- hetre85</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper footerwrapper">
+    <p>Designed by <a href="http://www.jessecrow.cow">Jesse Crow</a> and developed by Hunter Stewart. Powered by <a href="http://www.jekyllrb.com">Jekyll</a> and <a href="http://www.typekit.com">Typekit</a>.</p>
+
+  
+  </div>
+
+</footer>
+
+
+  <script>
+    var nav = responsiveNav(".nav-collapse");
+  </script>
+  </body>
+
+</html>
