@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Elixir Nested Maps</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?">
+  <meta name="description" content="Maps are key/value collections, great for storing cool_dogs">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/responsive-nav.js"></script>
+  <script src="//use.typekit.net/avc0ajs.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <link rel="canonical" href="http://www.hetre85.com/2015/08/27/elixir-maps.html">
+  <link rel="alternate" type="application/rss+xml" title="hetre85" href="http://www.hetre85.com/feed.xml" />
+</head>
+
+
+  <body>
+
+    <div class="wrapper">
+  <header class="site-header">
+    <div class="header-components">
+      <img src="/images/logo.png">
+      <nav class="nav-collapse">
+        <ul>
+          <li>
+            <a href="/index.html">BLOG</a>
+          </li>
+          <li>
+            <a href="/about/">ABOUT</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="hetre">
+          <img src="/images/hetre.png">
+        </div>
+        <div class="icons">
+          <img src="/images/ruby-icon.png">
+          <img src="/images/beer-icon.png">
+          <img src="/images/texas-icon.png">
+        </div>
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Elixir Nested Maps</h1>
+    <h3 class="post-meta">Aug 27, 2015</h3>
+  </header>
+
+  <article class="post-content">
+    <p>So far, I have made it through the <a href="http://elixir-lang.org">elixir-lang</a> getting started guide and about 30 pages into <a href="https://pragprog.com/book/elixir/programming-elixir">Programming Elixir</a>. It’s definitely been good to go over the material again since I don’t have a lot of experience with functional programming. I went back over collections today.</p>
+
+<p>Elixir has several collections including Tuples, Lists, Keyword Lists, Maps, and Binaries. To be honest I am trying to think about these ideas in terms of their own usage and existence as opposed to simply viewing them by analogy to things that I am already familiar with.</p>
+
+<p>Maps are key/value collections, great for storing cool_dogs and other stuff. Their syntax looks like this:</p>
+
+<pre><code>%{:key =&gt; value}
+</code></pre>
+
+<p><br />
+If all the keys are atoms (the ones with a leading colon) you can use this shortcut syntax and it feels eerily similar to Ruby.</p>
+
+<pre><code> %{key: value, k: v}
+</code></pre>
+
+<p><br />
+This seems very familiar and is really easy to work with. Here is an example of a nested Map:</p>
+
+<pre><code>cool_dogs = %{ dogs: %{ john: %{age: 1, ears: "pointy"}, donut: %{age: 4, ears: "floppy"}}}
+</code></pre>
+
+<p><br />
+Yay! Now we have a list of cool_dogs. If we want to access the value of the the atom <code>:dogs</code>, we can use our old friend square bracket to get there:</p>
+
+<pre><code>iex&gt; cool_dogs[:dogs]
+%{donut: %{age: 4, ears: "floppy"}, john: %{age: 1, ears: "pointy"}}
+</code></pre>
+
+<p><br />
+We can go further any by supplying another set of square brackets:</p>
+
+<pre><code>iex&gt; cool_dogs[:dogs][:donut]
+%{age: 4, ears: "floppy"}
+</code></pre>
+
+<p><br /></p>
+
+<p>And if you totally zone out and throw in a key that does not exist:</p>
+
+<pre><code>iex(8)&gt; cool_dogs[:legends_of_the_hidden_temple][:olmec][:open_your_temple_gates]
+nil
+</code></pre>
+
+<p><br /></p>
+
+<p>Instead of having to run away from the Temple Guardians, Elixir just returns <code>nil</code>. And that’s what I like about Elixir :)</p>
+
+<p>Tomorrow I’m going to go back over Anonymous Functions. See you next time!</p>
+
+<p>Cheers</p>
+
+<p>- hetre85</p>
+
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper footerwrapper">
+    <p>Designed by <a href="http://www.jessecrow.cow">Jesse Crow</a> and developed by Hunter Stewart. Powered by <a href="http://www.jekyllrb.com">Jekyll</a> and <a href="http://www.typekit.com">Typekit</a>.</p>
+
+  
+  </div>
+
+</footer>
+
+
+  <script>
+    var nav = responsiveNav(".nav-collapse");
+  </script>
+  </body>
+
+</html>
