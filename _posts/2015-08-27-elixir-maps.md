@@ -11,7 +11,9 @@ Elixir has several collections including Tuples, Lists, Keyword Lists, Maps, and
 
 Maps are key/value collections, great for storing cool_dogs and other stuff. Their syntax looks like this:
 
+    {% highlight elixir linenos %}
     %{:key => value}
+    {% endhighlight %}
 
 <br>
 If all the keys are atoms (the ones with a leading colon) you can use this shortcut syntax and it feels eerily similar to Ruby.
