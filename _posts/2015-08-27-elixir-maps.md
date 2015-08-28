@@ -11,38 +11,48 @@ Elixir has several collections including Tuples, Lists, Keyword Lists, Maps, and
 
 Maps are key/value collections, great for storing cool_dogs and other stuff. Their syntax looks like this:
 
-    {% highlight elixir linenos %}
+    {% highlight elixir %}
     %{:key => value}
     {% endhighlight %}
 
 <br>
 If all the keys are atoms (the ones with a leading colon) you can use this shortcut syntax and it feels eerily similar to Ruby.
 
+     {% highlight elixir %}
      %{key: value, k: v}
+     {% endhighlight %}
 
 <br>
 This seems very familiar and is really easy to work with. Here is an example of a nested Map:
 
+    {% highlight elixir %}
     cool_dogs = %{ dogs: %{ john: %{age: 1, ears: "pointy"}, donut: %{age: 4, ears: "floppy"}}}
+    {% endhighlight %}
 
 <br>
 Yay! Now we have a list of cool_dogs. If we want to access the value of the the atom `:dogs`, we can use our old friend square bracket to get there:
 
-    iex> cool_dogs[:dogs]
-    %{donut: %{age: 4, ears: "floppy"}, john: %{age: 1, ears: "pointy"}}
+{% highlight elixir %}
+iex> cool_dogs[:dogs]
+%{donut: %{age: 4, ears: "floppy"}, john: %{age: 1, ears: "pointy"}}
+{% endhighlight %}
 
 <br>
 We can go further any by supplying another set of square brackets:
 
-    iex> cool_dogs[:dogs][:donut]
-    %{age: 4, ears: "floppy"}
+{% highlight elixir %}
+iex> cool_dogs[:dogs][:donut]
+%{age: 4, ears: "floppy"}
+{% endhighlight %}
 
 <br>
 
 And if you totally zone out and throw in a key that does not exist:
 
-    iex(8)> cool_dogs[:legends_of_the_hidden_temple][:olmec][:open_your_temple_gates]
-    nil
+{% highlight elixir %}
+iex(8)> cool_dogs[:legends_of_the_hidden_temple][:olmec][:open_your_temple_gates]
+nil
+{% endhighlight %}
 
 <br>
 

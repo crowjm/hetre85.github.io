@@ -6,64 +6,58 @@
 </description>
     <link>http://www.hetre85.com/</link>
     <atom:link href="http://www.hetre85.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 27 Aug 2015 23:03:57 -0500</pubDate>
-    <lastBuildDate>Thu, 27 Aug 2015 23:03:57 -0500</lastBuildDate>
+    <pubDate>Thu, 27 Aug 2015 23:34:10 -0500</pubDate>
+    <lastBuildDate>Thu, 27 Aug 2015 23:34:10 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Elixir Nested Maps</title>
-        <description>&lt;p&gt;So far, I have made it through the &lt;a href=&quot;http://elixir-lang.org&quot;&gt;elixir-lang&lt;/a&gt; getting started guide and about 30 pages into &lt;a href=&quot;https://pragprog.com/book/elixir/programming-elixir&quot;&gt;Programming Elixir&lt;/a&gt;. It’s definitely been good to go over the material again since I don’t have a lot of experience with functional programming. I went back over collections today.&lt;/p&gt;
+        <description>&lt;p&gt;So far, I have made it through the &lt;a href=&quot;http://elixir-lang.org&quot;&gt;elixir-lang&lt;/a&gt; getting started guide and about 30 pages into &lt;a href=&quot;https://pragprog.com/book/elixir/programming-elixir&quot;&gt;Programming Elixir&lt;/a&gt;. It&amp;#39;s definitely been good to go over the material again since I don&amp;#39;t have a lot of experience with functional programming. I went back over collections today.&lt;/p&gt;
 
 &lt;p&gt;Elixir has several collections including Tuples, Lists, Keyword Lists, Maps, and Binaries. To be honest I am trying to think about these ideas in terms of their own usage and existence as opposed to simply viewing them by analogy to things that I am already familiar with.&lt;/p&gt;
 
 &lt;p&gt;Maps are key/value collections, great for storing cool_dogs and other stuff. Their syntax looks like this:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elixir&quot; data-lang=&quot;elixir&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;%{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:key&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elixir&quot; data-lang=&quot;elixir&quot;&gt;&lt;span class=&quot;p&quot;&gt;%{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:key&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;br&gt;
 If all the keys are atoms (the ones with a leading colon) you can use this shortcut syntax and it feels eerily similar to Ruby.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt; %{key: value, k: v}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elixir&quot; data-lang=&quot;elixir&quot;&gt;&lt;span class=&quot;p&quot;&gt;%{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;br&gt;
 This seems very familiar and is really easy to work with. Here is an example of a nested Map:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;cool_dogs = %{ dogs: %{ john: %{age: 1, ears: &quot;pointy&quot;}, donut: %{age: 4, ears: &quot;floppy&quot;}}}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elixir&quot; data-lang=&quot;elixir&quot;&gt;&lt;span class=&quot;n&quot;&gt;cool_dogs&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;%{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;dogs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;%{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;john&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;%{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;ears&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;pointy&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;donut&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;%{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;ears&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;floppy&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;br&gt;
 Yay! Now we have a list of cool_dogs. If we want to access the value of the the atom &lt;code&gt;:dogs&lt;/code&gt;, we can use our old friend square bracket to get there:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;iex&amp;gt; cool_dogs[:dogs]
-%{donut: %{age: 4, ears: &quot;floppy&quot;}, john: %{age: 1, ears: &quot;pointy&quot;}}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elixir&quot; data-lang=&quot;elixir&quot;&gt;&lt;span class=&quot;n&quot;&gt;iex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cool_dogs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:dogs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;%{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;donut&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;%{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;ears&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;floppy&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;john&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;%{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;ears&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;pointy&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;br&gt;
 We can go further any by supplying another set of square brackets:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;iex&amp;gt; cool_dogs[:dogs][:donut]
-%{age: 4, ears: &quot;floppy&quot;}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elixir&quot; data-lang=&quot;elixir&quot;&gt;&lt;span class=&quot;n&quot;&gt;iex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cool_dogs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:dogs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:donut&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;%{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;ears&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;floppy&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
 &lt;p&gt;And if you totally zone out and throw in a key that does not exist:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;iex(8)&amp;gt; cool_dogs[:legends_of_the_hidden_temple][:olmec][:open_your_temple_gates]
-nil
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elixir&quot; data-lang=&quot;elixir&quot;&gt;&lt;span class=&quot;n&quot;&gt;iex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cool_dogs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:legends_of_the_hidden_temple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:olmec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:open_your_temple_gates&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;nil&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;p&gt;Instead of having to run away from the Temple Guardians, Elixir just returns &lt;code&gt;nil&lt;/code&gt;. And that’s what I like about Elixir :)&lt;/p&gt;
+&lt;p&gt;Instead of having to run away from the Temple Guardians, Elixir just returns &lt;code&gt;nil&lt;/code&gt;. And that&amp;#39;s what I like about Elixir :)&lt;/p&gt;
 
-&lt;p&gt;Tomorrow I’m going to go back over Anonymous Functions. See you next time!&lt;/p&gt;
+&lt;p&gt;Tomorrow I&amp;#39;m going to go back over Anonymous Functions. See you next time!&lt;/p&gt;
 
 &lt;p&gt;Cheers&lt;/p&gt;
 
 &lt;p&gt;- hetre85&lt;/p&gt;
-
 </description>
         <pubDate>Thu, 27 Aug 2015 16:45:00 -0500</pubDate>
         <link>http://www.hetre85.com/2015/08/27/elixir-maps.html</link>
@@ -74,26 +68,25 @@ nil
     
       <item>
         <title>Elixir</title>
-        <description>&lt;p&gt;Being a programmer is fun, especially when you get to work in a language like Ruby all day. For the last year I have been working in Rails full time and I have come a long way since I started teaching myself Ruby back in 2013. I’m still really excited to work in Ruby/Rails each day but recently something has caught my attention and I have been spending my time outside of work digging into it: Elixir.&lt;/p&gt;
+        <description>&lt;p&gt;Being a programmer is fun, especially when you get to work in a language like Ruby all day. For the last year I have been working in Rails full time and I have come a long way since I started teaching myself Ruby back in 2013. I&amp;#39;m still really excited to work in Ruby/Rails each day but recently something has caught my attention and I have been spending my time outside of work digging into it: Elixir.&lt;/p&gt;
 
-&lt;p&gt;Elixir is functional language that has given me the same feeling of wonder that I had when I first started learning Ruby. It invites you to build fault-tolerant, distrubuted programs that rely on concurrency. It makes you rethink the basics of what you know about programming. It’s syntax seems much more familiar to Rubyist than other functional languages I’ve looked into. If you’ve been wanting to check out Elixir, head over to  &lt;a href=&quot;http://elixir-lang.org&quot;&gt;elixir-lang.org&lt;/a&gt; for install instructions and a really great getting-started section. You can always read the rest of this post later.&lt;/p&gt;
+&lt;p&gt;Elixir is functional language that has given me the same feeling of wonder that I had when I first started learning Ruby. It invites you to build fault-tolerant, distrubuted programs that rely on concurrency. It makes you rethink the basics of what you know about programming. It&amp;#39;s syntax seems much more familiar to Rubyist than other functional languages I&amp;#39;ve looked into. If you&amp;#39;ve been wanting to check out Elixir, head over to  &lt;a href=&quot;http://elixir-lang.org&quot;&gt;elixir-lang.org&lt;/a&gt; for install instructions and a really great getting-started section. You can always read the rest of this post later.&lt;/p&gt;
 
 &lt;p&gt;My goal going forward is to write about what I am learning in Elixir each day. I want to keep posts short and about something interesting I learned. For example, today I learned that Elixir uses &lt;code&gt;=&lt;/code&gt; for &lt;em&gt;pattern matching&lt;/em&gt; rather than assignment.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;iex&amp;gt; number = 42
-42
-iex&amp;gt; 42 = number 
-42
-iex&amp;gt; 1 = number                
-** (MatchError) no match of right hand side value: 42
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elixir&quot; data-lang=&quot;elixir&quot;&gt;&lt;span class=&quot;n&quot;&gt;iex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;iex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt; 
+&lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;iex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;                
+&lt;span class=&quot;o&quot;&gt;**&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MatchError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;no&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;match&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hand&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;side&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;br /&gt;
-So, Elixir is basically just trying to match both sides of the match operator. Variables can only be set when they are on the left side of the &lt;em&gt;match operator&lt;/em&gt;, so &lt;code&gt;42 = number&lt;/code&gt; is just making the assertion and it is passing; it’s not resetting the value of &lt;code&gt;number&lt;/code&gt;. This is why the last line of input fails: it simply trying to pattern match 1 and number (which at this point is 42). The pattern matching fails with a MatchError.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+So, Elixir is basically just trying to match both sides of the match operator. Variables can only be set when they are on the left side of the &lt;em&gt;match operator&lt;/em&gt;, so &lt;code&gt;42 = number&lt;/code&gt; is just making the assertion and it is passing; it&amp;#39;s not resetting the value of &lt;code&gt;number&lt;/code&gt;. This is why the last line of input fails: it simply trying to pattern match 1 and number (which at this point is 42). The pattern matching fails with a MatchError.&lt;/p&gt;
 
-&lt;p&gt;For a really thorough explanation of this and much more, see the &lt;a href=&quot;http://elixir-lang.org/getting-started/pattern-matching.html&quot;&gt;getting started guide&lt;/a&gt; or pick up Dave Thomas’ book, &lt;a href=&quot;https://pragprog.com/book/elixir/programming-elixir&quot;&gt;Programming Elixir&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For a really thorough explanation of this and much more, see the &lt;a href=&quot;http://elixir-lang.org/getting-started/pattern-matching.html&quot;&gt;getting started guide&lt;/a&gt; or pick up Dave Thomas&amp;#39; book, &lt;a href=&quot;https://pragprog.com/book/elixir/programming-elixir&quot;&gt;Programming Elixir&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Aside from being really cool, the aspect of this that strikes me is this: it kind of changes the way you think about programming. In Ruby we assign stuff all day and it is such an integral part of every solution that looking at code this way actually shifts &lt;em&gt;the way&lt;/em&gt; I’m thinking.&lt;/p&gt;
+&lt;p&gt;Aside from being really cool, the aspect of this that strikes me is this: it kind of changes the way you think about programming. In Ruby we assign stuff all day and it is such an integral part of every solution that looking at code this way actually shifts &lt;em&gt;the way&lt;/em&gt; I&amp;#39;m thinking.&lt;/p&gt;
 
 &lt;p&gt;Anyway, much more to come soon. Sorry if this post feels a little rushed, but I was eager to get started on blogging about Elixir! Yay!&lt;/p&gt;
 
@@ -110,27 +103,27 @@ So, Elixir is basically just trying to match both sides of the match operator. V
     
       <item>
         <title>New Design</title>
-        <description>&lt;h3 id=&quot;sometimes-you-need-a-ui-designer&quot;&gt;Sometimes You Need a UI Designer.&lt;/h3&gt;
-&lt;p&gt;Hi. Chances are you have never been to this blog, but not long ago, it was a plain, out of the box, jekyll blog. It looked pretty gnarly, like a 90’s website had a dream about the future. Like a geocity rising from the ashes of an angelfire.&lt;/p&gt;
+        <description>&lt;h3&gt;Sometimes You Need a UI Designer.&lt;/h3&gt;
 
-&lt;p&gt;When all seemed lost, yea, when even the sun itself began to set on the hope of this blog along came Jesse. She is a recent graduate of the Iron Yard’s UI Design program, as well as javascripter. You can read more about her process and her really cool “100 Days Project” as well as her blog over at &lt;a href=&quot;http://www.jessecrow.com&quot;&gt;jessecrow.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Hi. Chances are you have never been to this blog, but not long ago, it was a plain, out of the box, jekyll blog. It looked pretty gnarly, like a 90&amp;#39;s website had a dream about the future. Like a geocity rising from the ashes of an angelfire.&lt;/p&gt;
 
-&lt;h3 id=&quot;high-quality-work-on-a-small-project&quot;&gt;High Quality Work on a Small Project&lt;/h3&gt;
+&lt;p&gt;When all seemed lost, yea, when even the sun itself began to set on the hope of this blog along came Jesse. She is a recent graduate of the Iron Yard&amp;#39;s UI Design program, as well as javascripter. You can read more about her process and her really cool &amp;quot;100 Days Project&amp;quot; as well as her blog over at &lt;a href= &quot;http://www.jessecrow.com&quot;&gt;jessecrow.com&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;When I get a chance to work with someone who really cares about what they’re doing it inspires me. I know that this is a small, new blog but that didn’t stop Jesse from fully engaging in her design process. We talked through concepts and influences, then she would build really nice style tiles for different cohesive ideas. It was like getting to see a preview of the design vibe. &lt;/p&gt;
+&lt;h3&gt;High Quality Work on a Small Project&lt;/h3&gt;
 
-&lt;p&gt;After Jesse iterated over some concepts and style tiles, she produced mock-ups for several different viewport widths, and then we actually coded it up together. She did most of the driving as she is a jekyll/sass master.  The big take away from our pair programming session for me was that while sass is not difficult to learn, it takes a lot of skill and experience to organize your assets and stylesheets in a way that is extensible now and easy to change in the future. Sitting down for a few hours with a really skilled UI designer absolutely changed how I think about structuring style and content. It was also refreshing to work on something that’s not a rails app for a change :)&lt;/p&gt;
+&lt;p&gt;When I get a chance to work with someone who really cares about what they&amp;#39;re doing it inspires me. I know that this is a small, new blog but that didn&amp;#39;t stop Jesse from fully engaging in her design process. We talked through concepts and influences, then she would build really nice style tiles for different cohesive ideas. It was like getting to see a preview of the design vibe. &lt;/p&gt;
 
-&lt;p&gt;We went back and forth a bit about whether or not to use a mixin for a grid. In the end, the mixin was just more than we needed for the purposes of this blog and we decided against it. One thing I’ve been thinking about lately is going with the simplest solution that works now instead of engineering for situations that do not yet exist. I will take whatever modicum of simplicity I can get in the world of stylesheets.&lt;/p&gt;
+&lt;p&gt;After Jesse iterated over some concepts and style tiles, she produced mock-ups for several different viewport widths, and then we actually coded it up together. She did most of the driving as she is a jekyll/sass master.  The big take away from our pair programming session for me was that while sass is not difficult to learn, it takes a lot of skill and experience to organize your assets and stylesheets in a way that is extensible now and easy to change in the future. Sitting down for a few hours with a really skilled UI designer absolutely changed how I think about structuring style and content. It was also refreshing to work on something that&amp;#39;s not a rails app for a change :)&lt;/p&gt;
 
-&lt;p&gt;If you are working on a project with someone who has a high level of skill, do yourself a favor and ask if you can participate in the process at some point. I’m so glad that I got to help set up the jekyll stuff, learn more about sass, and watch a great designer at work.&lt;/p&gt;
+&lt;p&gt;We went back and forth a bit about whether or not to use a mixin for a grid. In the end, the mixin was just more than we needed for the purposes of this blog and we decided against it. One thing I&amp;#39;ve been thinking about lately is going with the simplest solution that works now instead of engineering for situations that do not yet exist. I will take whatever modicum of simplicity I can get in the world of stylesheets.&lt;/p&gt;
 
-&lt;p&gt;I will be blogging about something new that I’m working on starting tomorrow. I think it will be a lot of fun.&lt;/p&gt;
+&lt;p&gt;If you are working on a project with someone who has a high level of skill, do yourself a favor and ask if you can participate in the process at some point. I&amp;#39;m so glad that I got to help set up the jekyll stuff, learn more about sass, and watch a great designer at work.&lt;/p&gt;
+
+&lt;p&gt;I will be blogging about something new that I&amp;#39;m working on starting tomorrow. I think it will be a lot of fun.&lt;/p&gt;
 
 &lt;p&gt;Cheers&lt;/p&gt;
 
 &lt;p&gt;- hetre85&lt;/p&gt;
-
 </description>
         <pubDate>Tue, 25 Aug 2015 15:32:13 -0500</pubDate>
         <link>http://www.hetre85.com/2015/08/25/new-design.html</link>
@@ -141,34 +134,39 @@ So, Elixir is basically just trying to match both sides of the match operator. V
     
       <item>
         <title>Quietly Working Hard</title>
-        <description>&lt;h3 id=&quot;what-is-hetre85-talking-about&quot;&gt;What is hetre85 talking about?&lt;/h3&gt;
-&lt;p&gt;What does it mean to quietly work hard at something and why do I love this idea so much? We’ll take a look at the different components of the philosophy and practice of this idea.  Hopefully by the end of this post you’ll be inspired to do something similar or at least find your own method that keeps you inspired. We’ll start by looking at why it matters to be quiet, at least sometimes.&lt;/p&gt;
+        <description>&lt;h3&gt;What is hetre85 talking about?&lt;/h3&gt;
 
-&lt;h3 id=&quot;working-quietly&quot;&gt;Working Quietly&lt;/h3&gt;
-&lt;p&gt;Working quietly means that you have already realized that you want to do something and if you haven’t already taken the first step then you are going to take it right now. Seriously if there is something awesome that you are putting off, please stop reading this post, close all your buzzfeed tabs, and go do it. It doesn’t matter if it’s learning to paint, volunteering somewhere, working out, or anything else new and challenging you have decided to do. Don’t tweet about it. Don’t call your friends first. Quietly go get started.&lt;/p&gt;
+&lt;p&gt;What does it mean to quietly work hard at something and why do I love this idea so much? We&amp;#39;ll take a look at the different components of the philosophy and practice of this idea.  Hopefully by the end of this post you&amp;#39;ll be inspired to do something similar or at least find your own method that keeps you inspired. We&amp;#39;ll start by looking at why it matters to be quiet, at least sometimes.&lt;/p&gt;
+
+&lt;h3&gt;Working Quietly&lt;/h3&gt;
+
+&lt;p&gt;Working quietly means that you have already realized that you want to do something and if you haven&amp;#39;t already taken the first step then you are going to take it right now. Seriously if there is something awesome that you are putting off, please stop reading this post, close all your buzzfeed tabs, and go do it. It doesn&amp;#39;t matter if it&amp;#39;s learning to paint, volunteering somewhere, working out, or anything else new and challenging you have decided to do. Don&amp;#39;t tweet about it. Don&amp;#39;t call your friends first. Quietly go get started.&lt;/p&gt;
 
 &lt;p&gt;Working quietly means there are a few trusted people that know about your new project. Otherwise you would be working silently, which is not the goal. I find that having one mentor and a couple of encouragers surrounding me at the beginning is the best setup. Avoid telling everyone you know about your new project, because this tends to give your brain the reward feeling of actually having done something (which would be false this early on).&lt;/p&gt;
 
-&lt;p&gt;The early stages of a new project don’t really require any critics, at least not in my opinion. Any early criticism should come directly from your mentor. Right now you need to make the activation energy that you’ve mustered up last long enough to bring the concept into reality. Bring the third party critics in somewhere after your project is at least a little off the ground so they don’t crush your spirit but they still have time to give honest criticism that can improve your project. Early on you just need to survive.&lt;/p&gt;
+&lt;p&gt;The early stages of a new project don&amp;#39;t really require any critics, at least not in my opinion. Any early criticism should come directly from your mentor. Right now you need to make the activation energy that you&amp;#39;ve mustered up last long enough to bring the concept into reality. Bring the third party critics in somewhere after your project is at least a little off the ground so they don&amp;#39;t crush your spirit but they still have time to give honest criticism that can improve your project. Early on you just need to survive.&lt;/p&gt;
 
-&lt;h3 id=&quot;working-hard&quot;&gt;Working Hard&lt;/h3&gt;
+&lt;h3&gt;Working Hard&lt;/h3&gt;
+
 &lt;p&gt;Working hard is going to mean that you have to carve out new time in your day to achieve this new goal. For me, this is all about the early morning. When I am working on something new I tend to wake up early and let my rested, fresh mind handle the learning curves of the new challenge.&lt;/p&gt;
 
-&lt;p&gt;I know some people are night owls, and that is fine. I would warn you though, if you have a full time job your body/brain is going to be pretty taxed just from the day’s work. You may find it hard to actually start working on your project.&lt;/p&gt;
+&lt;p&gt;I know some people are night owls, and that is fine. I would warn you though, if you have a full time job your body/brain is going to be pretty taxed just from the day&amp;#39;s work. You may find it hard to actually start working on your project.&lt;/p&gt;
 
-&lt;p&gt;The mornings work so well for me (I’m talking like 4:30 or 5:00 in the morning) because you have this incredible feeling that you really got the jump on the day. It only takes me about a week of getting up that early before my body adjusts and it’s not too difficult.&lt;/p&gt;
+&lt;p&gt;The mornings work so well for me (I&amp;#39;m talking like 4:30 or 5:00 in the morning) because you have this incredible feeling that you really got the jump on the day. It only takes me about a week of getting up that early before my body adjusts and it&amp;#39;s not too difficult.&lt;/p&gt;
 
-&lt;p&gt;If you are really serious about developing a new skill or getting a new project going, I can’t recommend early mornings enough. To me it’s like a latent special power that we all have but that few of us ever activate.&lt;/p&gt;
+&lt;p&gt;If you are really serious about developing a new skill or getting a new project going, I can&amp;#39;t recommend early mornings enough. To me it&amp;#39;s like a latent special power that we all have but that few of us ever activate.&lt;/p&gt;
 
-&lt;h3 id=&quot;staying-the-course&quot;&gt;Staying the Course&lt;/h3&gt;
-&lt;p&gt;It’s all to easy to give your new project one or two days of hard work and then give up. A lot times we say something like “oh you know life just happens.” And that’s totally fine if life is going crazy for you right now, it may not be the best time to try to stick with this. But, if you’re like me, a lot of times that’s an excuse that amounts to little more than “I totally forgot to set my alarm” or “I’m going to allow myself to prioritize something less important over my new project because it sounds more fun.” I think that’s where most of us fall short of doing something new. Going out with friends is fine, but why did I stay out till 2am on Friday night if I knew I was planning on working on my project Saturday morning? Try to pinpoint these issues ahead of time and make a decision about your priorities. It will really shed light on how badly you want to make it work.&lt;/p&gt;
+&lt;h3&gt;Staying the Course&lt;/h3&gt;
 
-&lt;p&gt;Staying the course is easier for me the older I get. But you’re never too young to do simple planning tricks like making your to-do list a day ahead of time (or making one at all), choosing not to procrastinate, giving yourself deadlines, or joining a community of people who are trying to achieve similar results.&lt;/p&gt;
+&lt;p&gt;It&amp;#39;s all to easy to give your new project one or two days of hard work and then give up. A lot times we say something like &amp;quot;oh you know life just happens.&amp;quot; And that&amp;#39;s totally fine if life is going crazy for you right now, it may not be the best time to try to stick with this. But, if you&amp;#39;re like me, a lot of times that&amp;#39;s an excuse that amounts to little more than &amp;quot;I totally forgot to set my alarm&amp;quot; or &amp;quot;I&amp;#39;m going to allow myself to prioritize something less important over my new project because it sounds more fun.&amp;quot; I think that&amp;#39;s where most of us fall short of doing something new. Going out with friends is fine, but why did I stay out till 2am on Friday night if I knew I was planning on working on my project Saturday morning? Try to pinpoint these issues ahead of time and make a decision about your priorities. It will really shed light on how badly you want to make it work.&lt;/p&gt;
 
-&lt;h3 id=&quot;tying-it-all-together&quot;&gt;Tying it all Together&lt;/h3&gt;
+&lt;p&gt;Staying the course is easier for me the older I get. But you&amp;#39;re never too young to do simple planning tricks like making your to-do list a day ahead of time (or making one at all), choosing not to procrastinate, giving yourself deadlines, or joining a community of people who are trying to achieve similar results.&lt;/p&gt;
+
+&lt;h3&gt;Tying it all Together&lt;/h3&gt;
+
 &lt;p&gt;What change do you want to make in life? What new skill do you want to develop? What project are you getting really excited about?&lt;/p&gt;
 
-&lt;p&gt;These are great starting points, but fair warning: quietly working hard on something is really tough, and many will probably give it about a week. But whatever you do, if you choose to really dig in, I’m sure you can find the beauty and joy in it that will maintain your interest. And if you do fall away after a week, don’t be too proud to jump back in to it. When I started learning programming I hit a wall about 3 months in and didn’t touch it for maybe two weeks. All it took was a brief chat with a mentor to get me back on track and give me the power to visualize overcoming my obstacles.&lt;/p&gt;
+&lt;p&gt;These are great starting points, but fair warning: quietly working hard on something is really tough, and many will probably give it about a week. But whatever you do, if you choose to really dig in, I&amp;#39;m sure you can find the beauty and joy in it that will maintain your interest. And if you do fall away after a week, don&amp;#39;t be too proud to jump back in to it. When I started learning programming I hit a wall about 3 months in and didn&amp;#39;t touch it for maybe two weeks. All it took was a brief chat with a mentor to get me back on track and give me the power to visualize overcoming my obstacles.&lt;/p&gt;
 
 &lt;p&gt;Dream huge and work hard. I know you can do it.&lt;/p&gt;
 
@@ -186,58 +184,66 @@ So, Elixir is basically just trying to match both sides of the match operator. V
       <item>
         <title>Tips for Remote Work</title>
         <description>&lt;h3&gt;Who is this guy trying to be the hint master?&lt;/h3&gt;
-&lt;p&gt;I never thought I’d be &lt;em&gt;remotely&lt;/em&gt; qualified to give any advice on remote work. And, hey, don’t get me wrong - I’m not some sort of remote work genius that you can schedule an appointment with to solve all of your issues. That said, I do have 6+ months experience of working full time as a remote developer. In this time, I have learned a little bit about remote work, and a lot about myself. So, here it is, a short blog post about some pitfalls that I had to discover on my own that might help you out if you are new to remote work.&lt;/p&gt;
+
+&lt;p&gt;I never thought I&amp;#39;d be &lt;em&gt;remotely&lt;/em&gt; qualified to give any advice on remote work. And, hey, don&amp;#39;t get me wrong - I&amp;#39;m not some sort of remote work genius that you can schedule an appointment with to solve all of your issues. That said, I do have 6+ months experience of working full time as a remote developer. In this time, I have learned a little bit about remote work, and a lot about myself. So, here it is, a short blog post about some pitfalls that I had to discover on my own that might help you out if you are new to remote work.&lt;/p&gt;
 
 &lt;h4&gt;1. Get Everything in Writing&lt;/h4&gt;
+
 &lt;p&gt;No matter who you answer to, whenever you get an assignment please get it in writing. There is nothing more frustrating for you and your employer than you spending a whole day working on the wrong thing because there was a verbal miscommunication.&lt;/p&gt;
 
-&lt;p&gt;I learned this the hard way finding out that even if I took really great notes during conversations that something usually got missed. My favorite way to avoid this is to have some system like Github (create an issue, you get assigned to it) or Trello where everyone knows what everyone else is working on and all the requirements are in writing. If you have an employer or project manager who isn’t technical help them set up an account and show them how to add issues and just the very basics so that you have a streamlined, central source of communication around your project. I much prefer one of these systems over emails because a.) we get way too many emails already and b.) managing email threads… is that really how you want to spend your day?&lt;/p&gt;
+&lt;p&gt;I learned this the hard way finding out that even if I took really great notes during conversations that something usually got missed. My favorite way to avoid this is to have some system like Github (create an issue, you get assigned to it) or Trello where everyone knows what everyone else is working on and all the requirements are in writing. If you have an employer or project manager who isn&amp;#39;t technical help them set up an account and show them how to add issues and just the very basics so that you have a streamlined, central source of communication around your project. I much prefer one of these systems over emails because a.) we get way too many emails already and b.) managing email threads... is that really how you want to spend your day?&lt;/p&gt;
 
 &lt;h4&gt;2. Overcommunicate&lt;/h4&gt;
-&lt;p&gt;If you jump on a quick phone or video call with a colleague or your project manager and they ask you to get something done, no matter how simple it is I say something like this: “Before we get off this call I want to make sure that I understand you correctly. You want me to set variable x equal to false?” Then ask them to create an item in whatever project management system you use. Good policy to have: if it warrants a call, it should probably be written down.&lt;/p&gt;
+
+&lt;p&gt;If you jump on a quick phone or video call with a colleague or your project manager and they ask you to get something done, no matter how simple it is I say something like this: &amp;quot;Before we get off this call I want to make sure that I understand you correctly. You want me to set variable x equal to false?&amp;quot; Then ask them to create an item in whatever project management system you use. Good policy to have: if it warrants a call, it should probably be written down.&lt;/p&gt;
 
 &lt;h4&gt;3. Breaks&lt;/h4&gt;
-&lt;p&gt;If you’ve ever worked in an office you know that it’s basically the hit factory of people taking breaks. I think that one of the hardest parts of being remote is that because you don’t have any “I’m in the office” visibility, it’s really easy to try to overcompensate by not taking any breaks. I used to really worry about taking a lunch break. I remember thinking, “someone’s gonna email me and I won’t be there to respond and then the server will blow up and then a ultra negative doom spiral will flush the earth down the cosmic toilet.”&lt;/p&gt;
 
-&lt;p&gt;As it turns out, none of that happens when you take a lunch break, and even if it did, you not taking a lunch break won’t stop it. I admit, I do check my email during my lunch break to make sure that no one is waiting on anything from me, but I’ve come a long way from the “I’ll just eat in front of my computer and work every day” philosophy.&lt;/p&gt;
+&lt;p&gt;If you&amp;#39;ve ever worked in an office you know that it&amp;#39;s basically the hit factory of people taking breaks. I think that one of the hardest parts of being remote is that because you don&amp;#39;t have any &amp;quot;I&amp;#39;m in the office&amp;quot; visibility, it&amp;#39;s really easy to try to overcompensate by not taking any breaks. I used to really worry about taking a lunch break. I remember thinking, &amp;quot;someone&amp;#39;s gonna email me and I won&amp;#39;t be there to respond and then the server will blow up and then a ultra negative doom spiral will flush the earth down the cosmic toilet.&amp;quot;&lt;/p&gt;
 
-&lt;p&gt;When I used to work for Apple, we would take one 15 minute break in the mid-morning, an hour lunch, and another 15 in the afternoon. This is a pretty great setup but can be really tough for developers since I know a lot of us kind of get in the zone for 3 or 4 hours at a time and in all honesty a 1 hour lunch is a little long to me. Either way, the next time you push a bunch of commits up ask yourself when your last break was, because chances are it’s 4pm and you haven’t had lunch yet.&lt;/p&gt;
+&lt;p&gt;As it turns out, none of that happens when you take a lunch break, and even if it did, you not taking a lunch break won&amp;#39;t stop it. I admit, I do check my email during my lunch break to make sure that no one is waiting on anything from me, but I&amp;#39;ve come a long way from the &amp;quot;I&amp;#39;ll just eat in front of my computer and work every day&amp;quot; philosophy.&lt;/p&gt;
+
+&lt;p&gt;When I used to work for Apple, we would take one 15 minute break in the mid-morning, an hour lunch, and another 15 in the afternoon. This is a pretty great setup but can be really tough for developers since I know a lot of us kind of get in the zone for 3 or 4 hours at a time and in all honesty a 1 hour lunch is a little long to me. Either way, the next time you push a bunch of commits up ask yourself when your last break was, because chances are it&amp;#39;s 4pm and you haven&amp;#39;t had lunch yet.&lt;/p&gt;
 
 &lt;h4&gt;4. Stop Checking Your Work Email, Even for Just 2 Seconds&lt;/h4&gt;
-&lt;p&gt;Nothing is worse than the humanoid that won’t stop checking their work email when they’re at a family gathering, a friends night out, or worst of all… a date. Imagine you and your friends are out hiking on a Saturday, you stop to rest and decide to check your work email. Why? Seriously, why? “Sorry peeps, I have to go respond to this really not urgent issue. Later” Are you going to say that?&lt;/p&gt;
 
-&lt;p&gt;That’s a terrible setup. Check your email during your normal work hours and then just have a way to be reached if there’s an urgent issue. I like for there to be one person that I trust who I’m cool with shooting me a text or calling me if there’s something that needs immediate attention.&lt;/p&gt;
+&lt;p&gt;Nothing is worse than the humanoid that won&amp;#39;t stop checking their work email when they&amp;#39;re at a family gathering, a friends night out, or worst of all... a date. Imagine you and your friends are out hiking on a Saturday, you stop to rest and decide to check your work email. Why? Seriously, why? &amp;quot;Sorry peeps, I have to go respond to this really not urgent issue. Later&amp;quot; Are you going to say that?&lt;/p&gt;
 
-&lt;p&gt;Bottom line, you &lt;em&gt;have&lt;/em&gt; to be able to leave work at work - &lt;em&gt;at least&lt;/em&gt; sometimes. Otherwise you will start to notice some bad side effects in your life including but not limited to: loss of friends, chronic fatigue, anxiety, etc. And let’s be real. If, as a developer, you cannot be unavailable for at least a major part of the weekend and a reasonable part of weeknights you will probably burn out.&lt;/p&gt;
+&lt;p&gt;That&amp;#39;s a terrible setup. Check your email during your normal work hours and then just have a way to be reached if there&amp;#39;s an urgent issue. I like for there to be one person that I trust who I&amp;#39;m cool with shooting me a text or calling me if there&amp;#39;s something that needs immediate attention.&lt;/p&gt;
+
+&lt;p&gt;Bottom line, you &lt;em&gt;have&lt;/em&gt; to be able to leave work at work - &lt;em&gt;at least&lt;/em&gt; sometimes. Otherwise you will start to notice some bad side effects in your life including but not limited to: loss of friends, chronic fatigue, anxiety, etc. And let&amp;#39;s be real. If, as a developer, you cannot be unavailable for at least a major part of the weekend and a reasonable part of weeknights you will probably burn out.&lt;/p&gt;
 
 &lt;h4&gt;5. Maintain Visibility&lt;/h4&gt;
-&lt;p&gt;For me, this is the cure to a lot of remote ailments, and &lt;em&gt;please be in video conferences if you are remote&lt;/em&gt;. If you have video conferences that are scheduled, do not bail on these. It’s one thing for local employees to miss a meeting every once in a while; they’re going to be seen in the office later that day. But if a remote employee misses it, that might be the only time that week (or month!) that certain team members will see you. I make a point to absolutely clear my schedule for any meetings for one simple reason: it’s my opportunity to connect with the team in a more human way. A video conference might not be much but it’s a heck of a lot more than just being a gravatar to someone else.&lt;/p&gt;
+
+&lt;p&gt;For me, this is the cure to a lot of remote ailments, and &lt;em&gt;please be in video conferences if you are remote&lt;/em&gt;. If you have video conferences that are scheduled, do not bail on these. It&amp;#39;s one thing for local employees to miss a meeting every once in a while; they&amp;#39;re going to be seen in the office later that day. But if a remote employee misses it, that might be the only time that week (or month!) that certain team members will see you. I make a point to absolutely clear my schedule for any meetings for one simple reason: it&amp;#39;s my opportunity to connect with the team in a more human way. A video conference might not be much but it&amp;#39;s a heck of a lot more than just being a gravatar to someone else.&lt;/p&gt;
 
 &lt;h4&gt;6. Know Your Best Traits and Bring Them&lt;/h4&gt;
+
 &lt;p&gt;What personal traits do you bring to the table just as a human on this earth?&lt;/p&gt;
 
-&lt;p&gt;If you don’t know, find out. And do everything you can to make sure it comes across even in your remote work.&lt;/p&gt;
+&lt;p&gt;If you don&amp;#39;t know, find out. And do everything you can to make sure it comes across even in your remote work.&lt;/p&gt;
 
-&lt;p&gt;I’ll give you one example. Many of my favorite people are encouragers. You know them, the people that you are always excited to see because you know they will take interest in your life, your work, and will probably give you a word of encouragement before you part ways. They leave you energized.&lt;/p&gt;
+&lt;p&gt;I&amp;#39;ll give you one example. Many of my favorite people are encouragers. You know them, the people that you are always excited to see because you know they will take interest in your life, your work, and will probably give you a word of encouragement before you part ways. They leave you energized.&lt;/p&gt;
 
 &lt;p&gt;Imagine how lost this trait could for people who are remote. All you ever see is their commits, or maybe a cameo in a video conference.&lt;/p&gt;
 
-&lt;p&gt;But all it takes to bring that trait to the table is a little bit of effort. If you’re an encourager, make sure to send an email to someone who just finished up a big project and let them know what you like about it. Next time there is a conference call take a moment to give a shoutout to a colleague who did something to save you a lot of time, or whatever. Above all, be geniune. Be earnest.&lt;/p&gt;
+&lt;p&gt;But all it takes to bring that trait to the table is a little bit of effort. If you&amp;#39;re an encourager, make sure to send an email to someone who just finished up a big project and let them know what you like about it. Next time there is a conference call take a moment to give a shoutout to a colleague who did something to save you a lot of time, or whatever. Above all, be geniune. Be earnest.&lt;/p&gt;
 
-&lt;p&gt;And maybe what you bring to the table is something totally different, but I guess all I’m saying is don’t let that be lost just because you aren’t in the office. Don’t be just a gravatar to people on your team. Share your personality and your sense of wonder about the world.&lt;/p&gt;
+&lt;p&gt;And maybe what you bring to the table is something totally different, but I guess all I&amp;#39;m saying is don&amp;#39;t let that be lost just because you aren&amp;#39;t in the office. Don&amp;#39;t be just a gravatar to people on your team. Share your personality and your sense of wonder about the world.&lt;/p&gt;
 
 &lt;h4&gt;7. Reach Out&lt;/h4&gt;
-&lt;p&gt;Developers love to learn new things and solve problems. I think this is a great quality that leads to innovation, creative solutions, and better company/product/whatever. This leads us to want to figure things out on our own, and we’ll usually give something an honest effort before bothering another developer about what something in the code base does.&lt;/p&gt;
 
-&lt;p&gt;In a group setting it’s just easier to realize that you’ve been trying to figure something out for too long and you just need to ask someone else to look at it with you. But with remote work  you really lose that sense of “maybe I just need to ask someone what this confusing code is doing.”&lt;/p&gt;
+&lt;p&gt;Developers love to learn new things and solve problems. I think this is a great quality that leads to innovation, creative solutions, and better company/product/whatever. This leads us to want to figure things out on our own, and we&amp;#39;ll usually give something an honest effort before bothering another developer about what something in the code base does.&lt;/p&gt;
 
-&lt;p&gt;Do yourself a favor. Set a time limit for how long you should give anything that’s got you stumped before reaching out. You’d be surprised at how easy it is to spend an hour on something that a two or three minute chat could easily explain. Better to bother someone with a question upfront than have to explain later that it took you a super long time to figure it out by yourself.&lt;/p&gt;
+&lt;p&gt;In a group setting it&amp;#39;s just easier to realize that you&amp;#39;ve been trying to figure something out for too long and you just need to ask someone else to look at it with you. But with remote work  you really lose that sense of &amp;quot;maybe I just need to ask someone what this confusing code is doing.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;Do yourself a favor. Set a time limit for how long you should give anything that&amp;#39;s got you stumped before reaching out. You&amp;#39;d be surprised at how easy it is to spend an hour on something that a two or three minute chat could easily explain. Better to bother someone with a question upfront than have to explain later that it took you a super long time to figure it out by yourself.&lt;/p&gt;
 
 &lt;h4&gt;Conclusion&lt;/h4&gt;
 
 &lt;p&gt;Well, so much for this being short.&lt;/p&gt;
 
-&lt;p&gt;I don’t know how long I will work remote. I’m sure there are developers who have been doing it for many years and still love it. At six months in I am still having a lot of fun with it and it’s an incredible break from the last 10 years of “going to work” and “interacting with humans.” Also, in Austin I’m saving almost 2 hours of my day compared to my previous situation just because of commute times (the traffic here is the worst).&lt;/p&gt;
+&lt;p&gt;I don&amp;#39;t know how long I will work remote. I&amp;#39;m sure there are developers who have been doing it for many years and still love it. At six months in I am still having a lot of fun with it and it&amp;#39;s an incredible break from the last 10 years of &amp;quot;going to work&amp;quot; and &amp;quot;interacting with humans.&amp;quot; Also, in Austin I&amp;#39;m saving almost 2 hours of my day compared to my previous situation just because of commute times (the traffic here is the worst).&lt;/p&gt;
 
 &lt;p&gt;I still have a lot to learn about remote work. And, yes, I realize that there are many different remote scenarios. A lot of people work in co-working spaces, coffee shops, home offices, et al. I like to mix it up but do the majority of my work from my home office (the coffee is cheaper).&lt;/p&gt;
 
@@ -256,11 +262,12 @@ So, Elixir is basically just trying to match both sides of the match operator. V
     
       <item>
         <title>Init Post</title>
-        <description>&lt;h3 id=&quot;changing-the-framework-and-layout&quot;&gt;Changing the framework and layout&lt;/h3&gt;
+        <description>&lt;h3&gt;Changing the framework and layout&lt;/h3&gt;
+
 &lt;p&gt;I was using Octopress to blog. It was cool being able to install themes and have so some neat command line stuff, but for me it was just too big. I like the idea of a plain jekyll blog.&lt;/p&gt;
 
 &lt;p&gt;My first goal is to change the style. My second goal is to see if I can stick to blogging for one week. If I am able to stick with it then I will put in some time next weekend to make additional changes to the style and layout.
-We’ll see how it goes!&lt;/p&gt;
+We&amp;#39;ll see how it goes!&lt;/p&gt;
 
 &lt;p&gt;- hetre85&lt;/p&gt;
 </description>

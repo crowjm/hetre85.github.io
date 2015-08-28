@@ -10,4 +10,4 @@ github_username:  hetre85
 highlighter: pygments
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet

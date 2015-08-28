@@ -58,58 +58,52 @@
   </header>
 
   <article class="post-content">
-    <p>So far, I have made it through the <a href="http://elixir-lang.org">elixir-lang</a> getting started guide and about 30 pages into <a href="https://pragprog.com/book/elixir/programming-elixir">Programming Elixir</a>. It’s definitely been good to go over the material again since I don’t have a lot of experience with functional programming. I went back over collections today.</p>
+    <p>So far, I have made it through the <a href="http://elixir-lang.org">elixir-lang</a> getting started guide and about 30 pages into <a href="https://pragprog.com/book/elixir/programming-elixir">Programming Elixir</a>. It&#39;s definitely been good to go over the material again since I don&#39;t have a lot of experience with functional programming. I went back over collections today.</p>
 
 <p>Elixir has several collections including Tuples, Lists, Keyword Lists, Maps, and Binaries. To be honest I am trying to think about these ideas in terms of their own usage and existence as opposed to simply viewing them by analogy to things that I am already familiar with.</p>
 
 <p>Maps are key/value collections, great for storing cool_dogs and other stuff. Their syntax looks like this:</p>
 
-<div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="lineno">1</span> <span class="p">%{</span><span class="ss">:key</span> <span class="p">=&gt;</span> <span class="n">value</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="p">%{</span><span class="ss">:key</span> <span class="p">=&gt;</span> <span class="n">value</span><span class="p">}</span></code></pre></div>
 
-<p><br />
+<p><br>
 If all the keys are atoms (the ones with a leading colon) you can use this shortcut syntax and it feels eerily similar to Ruby.</p>
 
-<pre><code> %{key: value, k: v}
-</code></pre>
+<div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="p">%{</span><span class="ss">key</span><span class="p">:</span> <span class="n">value</span><span class="p">,</span> <span class="ss">k</span><span class="p">:</span> <span class="n">v</span><span class="p">}</span></code></pre></div>
 
-<p><br />
+<p><br>
 This seems very familiar and is really easy to work with. Here is an example of a nested Map:</p>
 
-<pre><code>cool_dogs = %{ dogs: %{ john: %{age: 1, ears: "pointy"}, donut: %{age: 4, ears: "floppy"}}}
-</code></pre>
+<div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="n">cool_dogs</span> <span class="p">=</span> <span class="p">%{</span> <span class="ss">dogs</span><span class="p">:</span> <span class="p">%{</span> <span class="ss">john</span><span class="p">:</span> <span class="p">%{</span><span class="ss">age</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="ss">ears</span><span class="p">:</span> <span class="s2">&quot;pointy&quot;</span><span class="p">},</span> <span class="ss">donut</span><span class="p">:</span> <span class="p">%{</span><span class="ss">age</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="ss">ears</span><span class="p">:</span> <span class="s2">&quot;floppy&quot;</span><span class="p">}}}</span></code></pre></div>
 
-<p><br />
+<p><br>
 Yay! Now we have a list of cool_dogs. If we want to access the value of the the atom <code>:dogs</code>, we can use our old friend square bracket to get there:</p>
 
-<pre><code>iex&gt; cool_dogs[:dogs]
-%{donut: %{age: 4, ears: "floppy"}, john: %{age: 1, ears: "pointy"}}
-</code></pre>
+<div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="n">iex</span><span class="o">&gt;</span> <span class="n">cool_dogs</span><span class="p">[</span><span class="ss">:dogs</span><span class="p">]</span>
+<span class="p">%{</span><span class="ss">donut</span><span class="p">:</span> <span class="p">%{</span><span class="ss">age</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="ss">ears</span><span class="p">:</span> <span class="s2">&quot;floppy&quot;</span><span class="p">},</span> <span class="ss">john</span><span class="p">:</span> <span class="p">%{</span><span class="ss">age</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="ss">ears</span><span class="p">:</span> <span class="s2">&quot;pointy&quot;</span><span class="p">}}</span></code></pre></div>
 
-<p><br />
+<p><br>
 We can go further any by supplying another set of square brackets:</p>
 
-<pre><code>iex&gt; cool_dogs[:dogs][:donut]
-%{age: 4, ears: "floppy"}
-</code></pre>
+<div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="n">iex</span><span class="o">&gt;</span> <span class="n">cool_dogs</span><span class="p">[</span><span class="ss">:dogs</span><span class="p">][</span><span class="ss">:donut</span><span class="p">]</span>
+<span class="p">%{</span><span class="ss">age</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="ss">ears</span><span class="p">:</span> <span class="s2">&quot;floppy&quot;</span><span class="p">}</span></code></pre></div>
 
-<p><br /></p>
+<p><br></p>
 
 <p>And if you totally zone out and throw in a key that does not exist:</p>
 
-<pre><code>iex(8)&gt; cool_dogs[:legends_of_the_hidden_temple][:olmec][:open_your_temple_gates]
-nil
-</code></pre>
+<div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="n">iex</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">cool_dogs</span><span class="p">[</span><span class="ss">:legends_of_the_hidden_temple</span><span class="p">][</span><span class="ss">:olmec</span><span class="p">][</span><span class="ss">:open_your_temple_gates</span><span class="p">]</span>
+<span class="no">nil</span></code></pre></div>
 
-<p><br /></p>
+<p><br></p>
 
-<p>Instead of having to run away from the Temple Guardians, Elixir just returns <code>nil</code>. And that’s what I like about Elixir :)</p>
+<p>Instead of having to run away from the Temple Guardians, Elixir just returns <code>nil</code>. And that&#39;s what I like about Elixir :)</p>
 
-<p>Tomorrow I’m going to go back over Anonymous Functions. See you next time!</p>
+<p>Tomorrow I&#39;m going to go back over Anonymous Functions. See you next time!</p>
 
 <p>Cheers</p>
 
 <p>- hetre85</p>
-
 
   </article>
 
