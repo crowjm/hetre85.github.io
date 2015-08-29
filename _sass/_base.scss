@@ -40,6 +40,14 @@ h1 {
   }
 }
 
+//====== Code Snippets =========//
+
+code,
+pre,
+samp {
+  overflow-x: scroll;
+}
+
 //========== BLOG ==========//
 .post-link {
   text-decoration: none;
@@ -85,6 +93,11 @@ h1 {
   margin-right: auto;
   p {
     margin-bottom: 2rem;
+  }
+  .highlight {
+    max-width: 700px;
+    font-size: 1rem;
+    font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
   }
 }
 

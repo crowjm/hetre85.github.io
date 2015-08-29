@@ -188,6 +188,11 @@ h1 {
   .icons img {
     width: 70px; }
 
+code,
+pre,
+samp {
+  overflow-x: scroll; }
+
 .post-link {
   text-decoration: none;
   text-transform: uppercase;
@@ -223,6 +228,10 @@ h1 {
   margin-right: auto; }
   .post-content p {
     margin-bottom: 2rem; }
+  .post-content .highlight {
+    max-width: 700px;
+    font-size: 1rem;
+    font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New; }
 
 .about-content {
   max-width: 1180px;
