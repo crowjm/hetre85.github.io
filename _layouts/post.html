@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<div class="wrapper">
 <div class="post">
 
   <header class="post-header">
@@ -12,4 +13,12 @@ layout: default
     {{ content }}
   </article>
 
+</div>
+</div>
+
+  <div class="blog-nav">
+	<div class="wrapper">
+		<a class="previous-entry" href="{{ page.previous.url }}">&laquo; Previous Entry</a>
+		<a class="next-entry" href="{{ page.next.url }}">Next Entry &raquo;</a>
+	</div>
 </div>

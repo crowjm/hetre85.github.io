@@ -8,7 +8,8 @@
 h1 {
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 //========= HEADER ==========//
@@ -16,29 +17,24 @@ h1 {
 .site-header {
   overflow: hidden;
   padding-top: 1rem;
-  border-bottom: 8px solid $border;
+  border-bottom: 5px solid $border;
   .header-components {
     padding-bottom: 1rem;
+    .logo-and-info {
+      overflow: hidden;
+      width: 80%;
+      float: left;
+      img {
+        float: left;
+      }
+      .info {
+        float: left;
+        margin-top: 30px;
+      }
+    }
   }
 }
 
-//====== HETRE + ICONS =====//
-
-.hetre img {
-  display: block;
-  margin: 4rem auto 2rem auto;
-}
-
-.icons {
-  width: 218px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 4rem;
-
-  img {
-    width: 70px;
-  }
-}
 
 //====== Code Snippets =========//
 
@@ -63,11 +59,12 @@ samp {
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
+  font-size: 1.25rem;
 }
 
 .post-float {
   width: 350px;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -101,6 +98,25 @@ samp {
   }
 }
 
+.blog-nav {
+  background-color: lighten($blog-nav-bg, 35%);
+  overflow: hidden;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-top: 3em;
+  .wrapper {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .previous-entry {
+    float: left;
+  }
+  .next-entry {
+    float: right;
+  }
+}
+
 //========= ABOUT  =========//
 .about-content {
   max-width: 1180px;
@@ -131,14 +147,19 @@ samp {
 
 
 //========= FOOTER =========//
-.footerwrapper {
-  border-top: 8px solid $border;
+.site-footer 
+{
+  border-top: 5px solid $border;
   background-image: url(/images/zigzagpattern.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+.footerwrapper {
+  overflow: hidden;
   p {
     max-width: 650px;
     margin-right: auto;
@@ -147,25 +168,26 @@ samp {
   }
 }
 
+.hetre-and-icons {
+  overflow: hidden;
+  width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
+.hetre img {
+  display: block;
+  width: 100px;
+  float: left;
+}
 
+.icons {
+  max-width: 218px;
+  margin-left: 2px;
+  margin-bottom: 2rem;
+  float: left;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  img {
+    width: 70px;
+  }
+}

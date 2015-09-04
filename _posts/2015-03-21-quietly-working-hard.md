@@ -2,7 +2,7 @@
 layout: post
 title:  "Quietly Working Hard"
 date:   2015-03-21 14:45:00
-excerpt: What project are you getting really excited about?
+excerpt: What new skill do you want to develop? What project are you getting really excited about?
 ---
 
 ### What is hetre85 talking about?

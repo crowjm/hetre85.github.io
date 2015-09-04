@@ -6,13 +6,13 @@
 </description>
     <link>http://www.hetre85.com/</link>
     <atom:link href="http://www.hetre85.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 29 Aug 2015 14:46:04 -0500</pubDate>
-    <lastBuildDate>Sat, 29 Aug 2015 14:46:04 -0500</lastBuildDate>
+    <pubDate>Thu, 03 Sep 2015 20:37:41 -0500</pubDate>
+    <lastBuildDate>Thu, 03 Sep 2015 20:37:41 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Elixir Nested Maps</title>
-        <description>&lt;p&gt;So far, I have made it through the &lt;a href=&quot;http://elixir-lang.org&quot;&gt;elixir-lang&lt;/a&gt; getting started guide and about 30 pages into &lt;a href=&quot;https://pragprog.com/book/elixir/programming-elixir&quot;&gt;Programming Elixir&lt;/a&gt;. It&amp;#39;s definitely been good to go over the material again since I don&amp;#39;t have a lot of experience with functional programming. I went back over collections today.&lt;/p&gt;
+        <description>&lt;p&gt;So far, I have made it through the &lt;a href=&quot;http://elixir-lang.org&quot;&gt;elixir-lang&lt;/a&gt; getting started guide and about 30 pages into &lt;a href=&quot;https://pragprog.com/book/elixir/programming-elixir&quot;&gt;Programming Elixir&lt;/a&gt;. It&amp;#39;s definitely been good to go over the material again since I don&amp;#39;t have a lot of experience with functional programming. I went back over collections today. &lt;/p&gt;
 
 &lt;p&gt;Elixir has several collections including Tuples, Lists, Keyword Lists, Maps, and Binaries. To be honest I am trying to think about these ideas in terms of their own usage and existence as opposed to simply viewing them by analogy to things that I am already familiar with.&lt;/p&gt;
 
@@ -70,7 +70,7 @@ We can go further any by supplying another set of square brackets:&lt;/p&gt;
         <title>Elixir</title>
         <description>&lt;p&gt;Being a programmer is fun, especially when you get to work in a language like Ruby all day. For the last year I have been working in Rails full time and I have come a long way since I started teaching myself Ruby back in 2013. I&amp;#39;m still really excited to work in Ruby/Rails each day but recently something has caught my attention and I have been spending my time outside of work digging into it: Elixir.&lt;/p&gt;
 
-&lt;p&gt;Elixir is functional language that has given me the same feeling of wonder that I had when I first started learning Ruby. It invites you to build fault-tolerant, distrubuted programs that rely on concurrency. It makes you rethink the basics of what you know about programming. It&amp;#39;s syntax seems much more familiar to Rubyist than other functional languages I&amp;#39;ve looked into. If you&amp;#39;ve been wanting to check out Elixir, head over to  &lt;a href=&quot;http://elixir-lang.org&quot;&gt;elixir-lang.org&lt;/a&gt; for install instructions and a really great getting-started section. You can always read the rest of this post later.&lt;/p&gt;
+&lt;p&gt;Elixir is functional language that has given me the same feeling of wonder that I had when I first started learning Ruby. It invites you to build fault-tolerant, distrubuted programs that rely on concurrency. It makes you rethink the basics of what you know about programming. Its syntax seems much more familiar to Rubyist than other functional languages I&amp;#39;ve looked into. If you&amp;#39;ve been wanting to check out Elixir, head over to  &lt;a href=&quot;http://elixir-lang.org&quot;&gt;elixir-lang.org&lt;/a&gt; for install instructions and a really great getting-started section. You can always read the rest of this post later.&lt;/p&gt;
 
 &lt;p&gt;My goal going forward is to write about what I am learning in Elixir each day. I want to keep posts short and about something interesting I learned. For example, today I learned that Elixir uses &lt;code&gt;=&lt;/code&gt; for &lt;em&gt;pattern matching&lt;/em&gt; rather than assignment.&lt;/p&gt;
 

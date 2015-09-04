@@ -2,10 +2,10 @@
 layout: post
 title:  "Elixir Nested Maps"
 date:   2015-08-27 21:45:00
-excerpt: Maps are key/value collections, great for storing cool_dogs
+excerpt: Maps are key/value collections, great for storing cool_dogs.
 ---
 
-So far, I have made it through the [elixir-lang](http://elixir-lang.org) getting started guide and about 30 pages into [Programming Elixir](https://pragprog.com/book/elixir/programming-elixir). It's definitely been good to go over the material again since I don't have a lot of experience with functional programming. I went back over collections today.
+So far, I have made it through the [elixir-lang](http://elixir-lang.org) getting started guide and about 30 pages into [Programming Elixir](https://pragprog.com/book/elixir/programming-elixir). It's definitely been good to go over the material again since I don't have a lot of experience with functional programming. I went back over collections today. 
 
 Elixir has several collections including Tuples, Lists, Keyword Lists, Maps, and Binaries. To be honest I am trying to think about these ideas in terms of their own usage and existence as opposed to simply viewing them by analogy to things that I am already familiar with.
 
