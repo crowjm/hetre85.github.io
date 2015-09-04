@@ -2,7 +2,7 @@
 layout: post
 title:  "Tips for Remote Work"
 date:   2015-03-19 17:00:00
-excerpt: Well, so much for this being short.
+excerpt: Here it is, a short blog post about some pitfalls that I had to discover on my own that might help you out if you are new to remote work.
 ---
 
 <h3>Who is this guy trying to be the hint master?</h3>

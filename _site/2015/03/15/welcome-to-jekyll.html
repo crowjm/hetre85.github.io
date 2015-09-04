@@ -22,10 +22,16 @@
 
   <body>
 
-    <div class="wrapper">
-  <header class="site-header">
+    <header class="site-header">
+  <div class="wrapper">
     <div class="header-components">
-      <img src="/images/logo.png">
+      <div class="logo-and-info">
+        <a href="http://www.hetre85.com"><img src="/images/logo.png"></a>
+        <div class="info">
+          <h2>hetre85</h2>
+          <p>Ruby | Rails | Elixir</p>
+        </div>
+      </div>
       <nav class="nav-collapse">
         <ul>
           <li>
@@ -37,20 +43,12 @@
         </ul>
       </nav>
     </div>
-  </header>
-</div>
+  </div>
+</header>
 
     <div class="page-content">
-      <div class="wrapper">
-        <div class="hetre">
-          <img src="/images/hetre.png">
-        </div>
-        <div class="icons">
-          <img src="/images/ruby-icon.png">
-          <img src="/images/beer-icon.png">
-          <img src="/images/texas-icon.png">
-        </div>
-        <div class="post">
+        <div class="wrapper">
+<div class="post">
 
   <header class="post-header">
     <h1 class="post-title">Init Post</h1>
@@ -70,20 +68,32 @@ We&#39;ll see how it goes!</p>
   </article>
 
 </div>
+</div>
 
-      </div>
+  <div class="blog-nav">
+	<div class="wrapper">
+		<a class="previous-entry" href="">&laquo; Previous Entry</a>
+		<a class="next-entry" href="/2015/03/19/tips-for-remote-work.html">Next Entry &raquo;</a>
+	</div>
+</div>
+
     </div>
 
     <footer class="site-footer">
-
-  <div class="wrapper footerwrapper">
-    <p>Designed by <a href="http://www.jessecrow.cow">Jesse Crow</a> and developed by Hunter Stewart. Powered by <a href="http://www.jekyllrb.com">Jekyll</a> and <a href="http://www.typekit.com">Typekit</a>.</p>
-
-  
-  </div>
-
+	<div class="wrapper footerwrapper">
+		<div class="hetre-and-icons">
+			<div class="hetre">
+				<img src="/images/hetre.png">
+			</div>
+			<div class="icons">
+				<img src="/images/ruby-icon.png">
+				<img src="/images/beer-icon.png">
+				<img src="/images/texas-icon.png">
+			</div>
+		</div>
+		<p>Designed by <a href="http://www.jessecrow.com">Jesse Crow</a> and developed by <a href="https://github.com/hetre85">Hunter Stewart</a> &amp; Jesse Crow. Powered by <a href="http://www.jekyllrb.com">Jekyll</a> and <a href="http://www.typekit.com">Typekit</a>.</p>
+	</div>
 </footer>
-
 
   <script>
     var nav = responsiveNav(".nav-collapse");

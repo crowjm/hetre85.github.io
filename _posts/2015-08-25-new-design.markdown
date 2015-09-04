@@ -2,7 +2,7 @@
 layout: post
 title:  "New Design"
 date:   2015-08-25 20:32:13
-excerpt: It looked pretty gnarly, like a 90's website had a dream about the future.
+excerpt: It looked pretty gnarly, like a 90's website had a dream about the future. Like a geocity rising from the ashes of an angelfire.
 ---
 
 ###Sometimes You Need a UI Designer.

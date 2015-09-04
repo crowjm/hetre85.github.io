@@ -1,4 +1,5 @@
 $font-family: "neuzeit-grotesk", sans-serif;
+$p-font-family: "proxima-nova",sans-serif;
 $h1: #ed1a24;
 $a: #ed1a24;
 $sub-head: #164d7e;
@@ -6,6 +7,7 @@ $p: #000;
 $bg: #fdf5ec;
 $border: #164d73;
 $post-meta: #184d7f;
+$blog-nav-bg: #ed1a24;
 
 p, a, span, li, q {
   line-height: 1.8;
@@ -16,30 +18,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, q, li {
-  font-family: $font-family;
+  font-family: $p-font-family;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: $p;
 }
 
 a {
   font-family: $font-family;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: $a;
 }
 
 h1 {
   font-family: $font-family;
   font-weight: 900;
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: $h1;
 }
 
 h2, .post-link {
   font-family: $font-family;
   font-weight: 900;
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   color: $sub-head;
 }
 
