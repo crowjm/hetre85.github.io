@@ -6,9 +6,89 @@
 </description>
     <link>http://www.hetre85.com/</link>
     <atom:link href="http://www.hetre85.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Sep 2015 20:37:41 -0500</pubDate>
-    <lastBuildDate>Thu, 03 Sep 2015 20:37:41 -0500</lastBuildDate>
+    <pubDate>Sun, 22 Nov 2015 19:45:04 -0600</pubDate>
+    <lastBuildDate>Sun, 22 Nov 2015 19:45:04 -0600</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Elixir Pin Operator</title>
+        <description>&lt;p&gt;So in brushing up on some of the Elixir that I learned this Summber I had a renewed appreciation for the Pin Operator. The Pin Operator basically lets you pattern match without rebinding a variable. You can check out &lt;a href=&quot;http://elixir-lang.org&quot;&gt;elixir-lang.org&lt;/a&gt; to learn more about pattern matching.&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;
+So let&amp;#39;s say we have the following list of atoms:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elixir&quot; data-lang=&quot;elixir&quot;&gt;&lt;span class=&quot;n&quot;&gt;cool_dogs_conditions&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:ice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:zone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:level_50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;
+And I also have the following list for fire&lt;em&gt;dogs&lt;/em&gt;conditions:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elixir&quot; data-lang=&quot;elixir&quot;&gt;&lt;span class=&quot;n&quot;&gt;fire_dogs_conditions&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:hot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:zone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:level_20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;
+How can I pattern match the two variables without accidentally rebinding the variable on the left hand side? Clearly I can&amp;#39;t just use &lt;code&gt;=&lt;/code&gt; as that will rebind the left-hand side:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elixir&quot; data-lang=&quot;elixir&quot;&gt;&lt;span class=&quot;n&quot;&gt;iex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cool_dogs_conditions&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fire_dogs_conditions&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:hot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:zone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:level_20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;
+So, let&amp;#39;s pretend we didn&amp;#39;t do that and instead leads use the Pin Operator to pattern match! The Pin Operator is this: ^. Just place it before the variable.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elixir&quot; data-lang=&quot;elixir&quot;&gt;&lt;span class=&quot;n&quot;&gt;iex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cool_dogs_conditions&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fire_dogs_conditions&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;**&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MatchError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;no&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;match&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hand&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;side&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:hot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:zone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:level_20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;Perfect! It didn&amp;#39;t match! What would it look like on a proper match? Let&amp;#39;s created fire&lt;em&gt;dogs&lt;/em&gt;duplicate to find out:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elixir&quot; data-lang=&quot;elixir&quot;&gt;&lt;span class=&quot;n&quot;&gt;iex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fire_dogs_dupliate&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:hot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:zone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:level_20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;iex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fire_dogs_conditions&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fire_dogs_duplicate&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;iex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:hot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:zone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:level_20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;Perfect! It just returns the value of the variables being matched.&lt;/p&gt;
+
+&lt;p&gt;Thanks for reading about the Pin Operator!&lt;/p&gt;
+
+&lt;p&gt;Cheers&lt;/p&gt;
+
+&lt;p&gt;- hetre85&lt;/p&gt;
+</description>
+        <pubDate>Sun, 22 Nov 2015 15:20:00 -0600</pubDate>
+        <link>http://www.hetre85.com/2015/11/22/pin-operator.html</link>
+        <guid isPermaLink="true">http://www.hetre85.com/2015/11/22/pin-operator.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Side Projects</title>
+        <description>&lt;p&gt;It would be easy to make excuses about why I have not blogged in two months. But instead I will say, &amp;quot;I did not make it a priority.&amp;quot; I once heard on the interwebs, &amp;quot;there is no time management, only priorities. And you can only have a few of those.&amp;quot; I agree with that.&lt;/p&gt;
+
+&lt;p&gt;My priorities over the last 2 months have been surviving 2 big releases at work and working on my songwriting and sound engineering. I&amp;#39;ve written about 15 songs, recorded 4, and am still hoping to wrap up the project around January.&lt;/p&gt;
+
+&lt;p&gt;I was working some pretty long hours with programming so I decided that I would let my software side projects take a back seat to something more musical. Now that work/life balance is back to normal I have had time to jump back into my programming side projects as well.&lt;/p&gt;
+
+&lt;p&gt;First, I have gotten back into Elixir. I&amp;#39;ve been brushing up on what I learned over the Summer. It all came back pretty easily. Second, I&amp;#39;ve jumped into Phoenix and started working through the basics of view, routes, etc. via the &lt;a href=&quot;http://www.phoenixframework.org/&quot;&gt;Phoenix website&lt;/a&gt;. It&amp;#39;s such an amazing feeling when you have the work/life balance to actually program out of curiosity and joy. Right now I am still working through the very basics but as a full time Rails developer and Ruby enthusiast I am feeling pretty at home with many of the conventions. If you have not discovered Phoenix yet and you like Rails check it out.&lt;/p&gt;
+
+&lt;p&gt;Finally, I am making a conscious effort to get involved with open source software. I&amp;#39;ve been on Github for a couple of years but I haven&amp;#39;t really contributed to other folks&amp;#39; repositories on regular basis. This last week I have found a project that is going to eventually help people find adoptable pets in their area using a Rails app hooked up to an API that serves a JSON payload with lots of data about pets in the area based on the zipcode supplied in the request. The rails engineer who is working on it is a newer developer but has done a great job getting the basics set up, and I think she is on the way to being a great engineer.&lt;/p&gt;
+
+&lt;p&gt;I am pretty pumped about helping build something that will lend a hand to our furry pals. On top of that, I am really thankful to be working on something that has given me a renewed interest in digging in deeper with Rails via teaching someone else. Sometimes, teaching someone who is new how to do something is the best way for your own knowledge to grow, because if you find yourself struggling to explain something it lets you realize that you need to expand or deepen your knowledge on that topic. And to truly be a good teacher, the teacher must be even more teachable than the student. I learn so much from folks that I help with Rails, whether it&amp;#39;s through really awesome questions that they ask or actual knowledge that they have that I am missing. Teaching is really two-ways if the teacher is open to it.&lt;/p&gt;
+
+&lt;p&gt;When you work on a side project with a newer developer sometimes it&amp;#39;s tempting to try to be some cool wizard who just zips through everything and makes it all happen in the blink of an eye. Maybe we all wanna be wizards but sometimes the team really needs a healer. Someone who can focus on regenerating the team members and who can help guide and direct without taking over the whole project. Is it better to swoop in and make everything much more elegant/better/faster/hipper or is it better to take the time to help guide a newer developer to a better way of approaching the problem? The Socratic method works really well in development because the sense of discovery is much more powerful than being temporarily wowed by some senior developer&amp;#39;s ability to quickly debug/build/whatever.&lt;/p&gt;
+
+&lt;p&gt;Working on side projects, opening up pull requests, closing out issues... these are all the things that are a sign that you are in the right profession. I don&amp;#39;t think anyone needs to spend all day in front of the computer and then work all night on side projects, but to be able to take some time during the week or weekend to give back to the community just lets you grow and re-affirm that you are doing something that is really worthwhile, that you would be doing it even if you weren&amp;#39;t getting paid, because if you are working on open source software, that is your actual situation :)&lt;/p&gt;
+
+&lt;p&gt;Cheers&lt;/p&gt;
+
+&lt;p&gt;- hetre85&lt;/p&gt;
+</description>
+        <pubDate>Sat, 21 Nov 2015 13:00:00 -0600</pubDate>
+        <link>http://www.hetre85.com/2015/11/21/side-projects.html</link>
+        <guid isPermaLink="true">http://www.hetre85.com/2015/11/21/side-projects.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Elixir Nested Maps</title>

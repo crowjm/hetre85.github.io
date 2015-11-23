@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Elixir Pin Operator</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?">
+  <meta name="description" content="Pin operator lets you pattern match cool_dogs to fire_dogs without rebinding variables.">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <script src="/js/responsive-nav.js"></script>
+  <script src="//use.typekit.net/avc0ajs.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <link rel="canonical" href="http://www.hetre85.com/2015/11/22/pin-operator.html">
+  <link rel="alternate" type="application/rss+xml" title="hetre85" href="http://www.hetre85.com/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <div class="header-components">
+      <div class="logo-and-info">
+        <a href="http://www.hetre85.com"><img src="/images/logo.png"></a>
+        <div class="info">
+          <h2>hetre85</h2>
+          <p>Ruby | Rails | Elixir</p>
+        </div>
+      </div>
+      <nav class="nav-collapse">
+        <ul>
+          <li>
+            <a href="/index.html">BLOG</a>
+          </li>
+          <li>
+            <a href="/about/">ABOUT</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+    <div class="page-content">
+        <div class="wrapper">
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Elixir Pin Operator</h1>
+    <h3 class="post-meta">Nov 22, 2015</h3>
+  </header>
+
+  <article class="post-content">
+    <p>So in brushing up on some of the Elixir that I learned this Summber I had a renewed appreciation for the Pin Operator. The Pin Operator basically lets you pattern match without rebinding a variable. You can check out <a href="http://elixir-lang.org">elixir-lang.org</a> to learn more about pattern matching.</p>
+
+<p><br>
+So let&#39;s say we have the following list of atoms:</p>
+
+<div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="n">cool_dogs_conditions</span> <span class="p">=</span> <span class="p">[</span><span class="ss">:ice</span><span class="p">,</span> <span class="ss">:zone</span><span class="p">,</span> <span class="ss">:level_50</span><span class="p">]</span></code></pre></div>
+
+<p><br>
+And I also have the following list for fire<em>dogs</em>conditions:</p>
+
+<div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="n">fire_dogs_conditions</span> <span class="p">=</span> <span class="p">[</span><span class="ss">:hot</span><span class="p">,</span> <span class="ss">:zone</span><span class="p">,</span> <span class="ss">:level_20</span><span class="p">]</span></code></pre></div>
+
+<p><br>
+How can I pattern match the two variables without accidentally rebinding the variable on the left hand side? Clearly I can&#39;t just use <code>=</code> as that will rebind the left-hand side:</p>
+
+<div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="n">iex</span><span class="o">&gt;</span> <span class="n">cool_dogs_conditions</span> <span class="p">=</span> <span class="n">fire_dogs_conditions</span>
+<span class="p">[</span><span class="ss">:hot</span><span class="p">,</span> <span class="ss">:zone</span><span class="p">,</span> <span class="ss">:level_20</span><span class="p">]</span></code></pre></div>
+
+<p><br>
+So, let&#39;s pretend we didn&#39;t do that and instead leads use the Pin Operator to pattern match! The Pin Operator is this: ^. Just place it before the variable.</p>
+
+<div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="n">iex</span><span class="o">&gt;</span> <span class="o">^</span><span class="n">cool_dogs_conditions</span> <span class="p">=</span> <span class="n">fire_dogs_conditions</span>
+<span class="o">**</span> <span class="p">(</span><span class="nc">MatchError</span><span class="p">)</span> <span class="n">no</span> <span class="n">match</span> <span class="n">of</span> <span class="n">right</span> <span class="n">hand</span> <span class="n">side</span> <span class="ss">value</span><span class="p">:</span> <span class="p">[</span><span class="ss">:hot</span><span class="p">,</span> <span class="ss">:zone</span><span class="p">,</span> <span class="ss">:level_20</span><span class="p">]</span></code></pre></div>
+
+<p><br></p>
+
+<p>Perfect! It didn&#39;t match! What would it look like on a proper match? Let&#39;s created fire<em>dogs</em>duplicate to find out:</p>
+
+<div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="n">iex</span><span class="o">&gt;</span> <span class="n">fire_dogs_dupliate</span> <span class="p">=</span> <span class="p">[</span><span class="ss">:hot</span><span class="p">,</span> <span class="ss">:zone</span><span class="p">,</span> <span class="ss">:level_20</span><span class="p">]</span>
+<span class="n">iex</span><span class="o">&gt;</span> <span class="o">^</span><span class="n">fire_dogs_conditions</span> <span class="p">=</span> <span class="n">fire_dogs_duplicate</span>
+<span class="n">iex</span><span class="o">&gt;</span> <span class="p">[</span><span class="ss">:hot</span><span class="p">,</span> <span class="ss">:zone</span><span class="p">,</span> <span class="ss">:level_20</span><span class="p">]</span></code></pre></div>
+
+<p><br></p>
+
+<p>Perfect! It just returns the value of the variables being matched.</p>
+
+<p>Thanks for reading about the Pin Operator!</p>
+
+<p>Cheers</p>
+
+<p>- hetre85</p>
+
+  </article>
+
+</div>
+</div>
+
+  <div class="blog-nav">
+	<div class="wrapper">
+		<a class="previous-entry" href="/2015/11/21/side-projects.html">&laquo; Previous Entry</a>
+		<a class="next-entry" href="">Next Entry &raquo;</a>
+	</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+	<div class="wrapper footerwrapper">
+		<div class="hetre-and-icons">
+			<div class="hetre">
+				<img src="/images/hetre.png">
+			</div>
+			<div class="icons">
+				<img src="/images/ruby-icon.png">
+				<img src="/images/beer-icon.png">
+				<img src="/images/texas-icon.png">
+			</div>
+		</div>
+		<p>Designed by <a href="http://www.jessecrow.com">Jesse Crow</a> and developed by <a href="https://github.com/hetre85">Hunter Stewart</a> &amp; Jesse Crow. Powered by <a href="http://www.jekyllrb.com">Jekyll</a> and <a href="http://www.typekit.com">Typekit</a>.</p>
+	</div>
+</footer>
+
+  <script>
+    var nav = responsiveNav(".nav-collapse");
+  </script>
+  </body>
+
+</html>
