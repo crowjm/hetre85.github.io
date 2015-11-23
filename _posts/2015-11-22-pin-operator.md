@@ -38,7 +38,7 @@ iex> ^cool_dogs_conditions = fire_dogs_conditions
 
 <br>
 
-Perfect! It didn't match! What would it look like on a proper match? Let's created `fire_dogs_duplicate` to find out:
+Perfect! It didn't match! What would it look like on a proper match? Let's create `fire_dogs_duplicate` to find out:
 
 {% highlight elixir %}
 iex> fire_dogs_dupliate = [:hot, :zone, :level_20]
