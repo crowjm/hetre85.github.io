@@ -56,15 +56,14 @@
   </header>
 
   <article class="post-content">
-    <p>So in brushing up on some of the Elixir that I learned this Summber I had a renewed appreciation for the Pin Operator. The Pin Operator basically lets you pattern match without rebinding a variable. You can check out <a href="http://elixir-lang.org">elixir-lang.org</a> to learn more about pattern matching.</p>
+    <p>So in brushing up on some of the Elixir that I learned this Summer I had a renewed appreciation for the Pin Operator. The Pin Operator basically lets you pattern match without rebinding a variable. You can check out <a href="http://elixir-lang.org">elixir-lang.org</a> to learn more about pattern matching.</p>
 
-<p><br>
-So let&#39;s say we have the following list of atoms:</p>
+<p>So let&#39;s say we have the following list of atoms:</p>
 
 <div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="n">cool_dogs_conditions</span> <span class="p">=</span> <span class="p">[</span><span class="ss">:ice</span><span class="p">,</span> <span class="ss">:zone</span><span class="p">,</span> <span class="ss">:level_50</span><span class="p">]</span></code></pre></div>
 
 <p><br>
-And I also have the following list for fire<em>dogs</em>conditions:</p>
+And I also have the following list for <code>fire_dogs_conditions</code>:</p>
 
 <div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="n">fire_dogs_conditions</span> <span class="p">=</span> <span class="p">[</span><span class="ss">:hot</span><span class="p">,</span> <span class="ss">:zone</span><span class="p">,</span> <span class="ss">:level_20</span><span class="p">]</span></code></pre></div>
 
@@ -75,14 +74,14 @@ How can I pattern match the two variables without accidentally rebinding the var
 <span class="p">[</span><span class="ss">:hot</span><span class="p">,</span> <span class="ss">:zone</span><span class="p">,</span> <span class="ss">:level_20</span><span class="p">]</span></code></pre></div>
 
 <p><br>
-So, let&#39;s pretend we didn&#39;t do that and instead leads use the Pin Operator to pattern match! The Pin Operator is this: ^. Just place it before the variable.</p>
+So, let&#39;s pretend we didn&#39;t do that and instead let&#39;s use the Pin Operator to pattern match! The Pin Operator is this: ^. Just place it before the variable.</p>
 
 <div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="n">iex</span><span class="o">&gt;</span> <span class="o">^</span><span class="n">cool_dogs_conditions</span> <span class="p">=</span> <span class="n">fire_dogs_conditions</span>
 <span class="o">**</span> <span class="p">(</span><span class="nc">MatchError</span><span class="p">)</span> <span class="n">no</span> <span class="n">match</span> <span class="n">of</span> <span class="n">right</span> <span class="n">hand</span> <span class="n">side</span> <span class="ss">value</span><span class="p">:</span> <span class="p">[</span><span class="ss">:hot</span><span class="p">,</span> <span class="ss">:zone</span><span class="p">,</span> <span class="ss">:level_20</span><span class="p">]</span></code></pre></div>
 
 <p><br></p>
 
-<p>Perfect! It didn&#39;t match! What would it look like on a proper match? Let&#39;s created fire<em>dogs</em>duplicate to find out:</p>
+<p>Perfect! It didn&#39;t match! What would it look like on a proper match? Let&#39;s create <code>fire_dogs_duplicate</code> to find out:</p>
 
 <div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="n">iex</span><span class="o">&gt;</span> <span class="n">fire_dogs_dupliate</span> <span class="p">=</span> <span class="p">[</span><span class="ss">:hot</span><span class="p">,</span> <span class="ss">:zone</span><span class="p">,</span> <span class="ss">:level_20</span><span class="p">]</span>
 <span class="n">iex</span><span class="o">&gt;</span> <span class="o">^</span><span class="n">fire_dogs_conditions</span> <span class="p">=</span> <span class="n">fire_dogs_duplicate</span>

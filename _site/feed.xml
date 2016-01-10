@@ -6,21 +6,20 @@
 </description>
     <link>http://www.hetre85.com/</link>
     <atom:link href="http://www.hetre85.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 22 Nov 2015 19:45:04 -0600</pubDate>
-    <lastBuildDate>Sun, 22 Nov 2015 19:45:04 -0600</lastBuildDate>
+    <pubDate>Sun, 10 Jan 2016 16:41:45 -0600</pubDate>
+    <lastBuildDate>Sun, 10 Jan 2016 16:41:45 -0600</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Elixir Pin Operator</title>
-        <description>&lt;p&gt;So in brushing up on some of the Elixir that I learned this Summber I had a renewed appreciation for the Pin Operator. The Pin Operator basically lets you pattern match without rebinding a variable. You can check out &lt;a href=&quot;http://elixir-lang.org&quot;&gt;elixir-lang.org&lt;/a&gt; to learn more about pattern matching.&lt;/p&gt;
+        <description>&lt;p&gt;So in brushing up on some of the Elixir that I learned this Summer I had a renewed appreciation for the Pin Operator. The Pin Operator basically lets you pattern match without rebinding a variable. You can check out &lt;a href=&quot;http://elixir-lang.org&quot;&gt;elixir-lang.org&lt;/a&gt; to learn more about pattern matching.&lt;/p&gt;
 
-&lt;p&gt;&lt;br&gt;
-So let&amp;#39;s say we have the following list of atoms:&lt;/p&gt;
+&lt;p&gt;So let&amp;#39;s say we have the following list of atoms:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elixir&quot; data-lang=&quot;elixir&quot;&gt;&lt;span class=&quot;n&quot;&gt;cool_dogs_conditions&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:ice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:zone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:level_50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;br&gt;
-And I also have the following list for fire&lt;em&gt;dogs&lt;/em&gt;conditions:&lt;/p&gt;
+And I also have the following list for &lt;code&gt;fire_dogs_conditions&lt;/code&gt;:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elixir&quot; data-lang=&quot;elixir&quot;&gt;&lt;span class=&quot;n&quot;&gt;fire_dogs_conditions&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:hot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:zone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:level_20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -31,14 +30,14 @@ How can I pattern match the two variables without accidentally rebinding the var
 &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:hot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:zone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:level_20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;br&gt;
-So, let&amp;#39;s pretend we didn&amp;#39;t do that and instead leads use the Pin Operator to pattern match! The Pin Operator is this: ^. Just place it before the variable.&lt;/p&gt;
+So, let&amp;#39;s pretend we didn&amp;#39;t do that and instead let&amp;#39;s use the Pin Operator to pattern match! The Pin Operator is this: ^. Just place it before the variable.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elixir&quot; data-lang=&quot;elixir&quot;&gt;&lt;span class=&quot;n&quot;&gt;iex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cool_dogs_conditions&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fire_dogs_conditions&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;**&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MatchError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;no&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;match&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hand&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;side&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:hot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:zone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:level_20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;p&gt;Perfect! It didn&amp;#39;t match! What would it look like on a proper match? Let&amp;#39;s created fire&lt;em&gt;dogs&lt;/em&gt;duplicate to find out:&lt;/p&gt;
+&lt;p&gt;Perfect! It didn&amp;#39;t match! What would it look like on a proper match? Let&amp;#39;s create &lt;code&gt;fire_dogs_duplicate&lt;/code&gt; to find out:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elixir&quot; data-lang=&quot;elixir&quot;&gt;&lt;span class=&quot;n&quot;&gt;iex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fire_dogs_dupliate&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:hot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:zone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:level_20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;iex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fire_dogs_conditions&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fire_dogs_duplicate&lt;/span&gt;

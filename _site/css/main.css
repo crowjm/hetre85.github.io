@@ -55,7 +55,7 @@ p, q, li {
   font-family: "proxima-nova", sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
-  color: black; }
+  color: #000; }
 
 a {
   font-family: "neuzeit-grotesk", sans-serif;
@@ -129,7 +129,7 @@ body {
   position: relative; }
 
 .nav-toggle {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -254,7 +254,6 @@ samp {
   margin-left: auto; }
 
 .about {
-  margin-bottom: 4rem;
   overflow: hidden; }
   .about .about-text {
     max-width: 700px;
